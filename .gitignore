@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/raw/
+data/*.mp4
+*.pt
+*.onnx
+!**/outputs/*.jpg
+node_modules/
+.ipynb_checkpoints/
+*.log
+.DS_Store
