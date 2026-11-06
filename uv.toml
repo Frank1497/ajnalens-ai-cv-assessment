@@ -1,0 +1,4 @@
+# easyocr and roboflow depend on opencv-python-headless. That wheel installs
+# into the same cv2/ directory as opencv-python and removes highgui, so
+# cv2.imshow raises "The function is not implemented". Keep the GUI wheel.
+exclude-dependencies = ["opencv-python-headless"]

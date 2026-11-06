@@ -16,6 +16,7 @@ Usage:
 """
 import argparse
 import json
+import os
 import time
 from collections import deque
 from pathlib import Path
@@ -103,6 +104,28 @@ def ppe_label_for_person(assigned_detections):
 def load_config(path):
     with open(path) as f:
         return json.load(f)
+
+
+def live_preview_enabled(task_label):
+    """True when a display exists and this OpenCV build implements highgui.
+
+    opencv-python-headless (and a missing DISPLAY) make cv2.imshow raise.
+    Callers should keep writing the output video either way.
+    """
+    has_display = bool(os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY"))
+    gui_backend = ""
+    for line in cv2.getBuildInformation().splitlines():
+        stripped = line.strip()
+        if stripped.startswith("GUI:"):
+            gui_backend = stripped.split(":", 1)[1].strip()
+            break
+    if has_display and gui_backend.upper() not in ("", "NONE"):
+        return True
+    print(
+        f"[{task_label}] live preview skipped "
+        "(no display or OpenCV highgui unavailable)"
+    )
+    return False
 
 
 def resolve_from_config(base_dir, value):
@@ -261,6 +284,17 @@ def main():
         stream=True,
         verbose=False,
     )
+
+    show_live = live_preview_enabled("task2")
+    if show_live:
+        try:
+            cv2.namedWindow("Task 2 PPE Live", cv2.WINDOW_NORMAL)
+        except cv2.error:
+            show_live = False
+            print(
+                "[task2] live preview skipped "
+                "(no display or OpenCV highgui unavailable)"
+            )
 
     for result in results_gen:
         frame = result.orig_img.copy()
@@ -469,9 +503,23 @@ def main():
                     counter_thickness, cv2.LINE_AA)
 
         writer.write(frame)
+        # LIVE WINDOW FOR DEMO
+        if show_live:
+            try:
+                cv2.imshow("Task 2 PPE Live", frame)
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break
+            except cv2.error:
+                show_live = False
+                print(
+                    "[task2] live preview skipped "
+                    "(no display or OpenCV highgui unavailable)"
+                )
         frame_idx += 1
 
     writer.release()
+    if show_live:
+        cv2.destroyAllWindows()
     t_elapsed = time.time() - t_start
     avg_fps = frame_idx / t_elapsed if t_elapsed > 0 else 0.0
 

@@ -1,0 +1,60 @@
+{
+  "zone": {
+    "name": "crane_working_envelope",
+    "polygon": [
+      [
+        0,
+        528
+      ],
+      [
+        992,
+        528
+      ],
+      [
+        992,
+        1440
+      ],
+      [
+        0,
+        1440
+      ]
+    ],
+    "exit_grace_sec": 2.0,
+    "comment": "Auto-generated from Cuplock-1_CCTV_CCTV_20250823100919_20250823101719_919368_first120s.mp4: HSV color-segmented the crane's yellow/orange paint across 126/126 sampled frames (every 1.0s), unioned all detected boxes to capture the crane's full swept/rotated working envelope over the clip, then padded 40px. Source resolution 2560x1440. Not hand-picked.",
+    "comment_grace": "exit_grace_sec: a track missing from detections for up to this many seconds is still treated as inside the zone it was last confirmed in, so a brief detector/tracker flicker (1-2 missed frames, measured on this clip) does not look like a zone exit+re-entry and double-fire ZONE_ENTRY on one real entry. Raised 0.5->2.0s: boundary-straddling (foot point oscillating right on the polygon edge, e.g. track 5 at t=37-43s reaching for material) was still re-firing ZONE_ENTRY faster than the 0.5s grace window closed it; 2.0s absorbs that without masking a genuine exit+return (no real exit/re-entry pair on this clip is closer together than 2s). Converted to frames via round(exit_grace_sec * source_fps), not wall-clock time.time() -- all event timing is frame_idx/fps_in, deterministic regardless of processing speed."
+  },
+  "idle": {
+    "pixel_threshold": 25,
+    "seconds_threshold": 5.0,
+    "radius_mode": "box_width_fraction",
+    "box_width_fraction": 0.25,
+    "comment": "A tracked object whose foot-point stays within `radius` of its position from seconds_threshold ago (fixed-anchor displacement over the full window, not frame-to-frame step distance -- catches slow drift a per-step check misses) raises IDLE_ALERT. radius_mode='fixed' uses pixel_threshold directly; radius_mode='box_width_fraction' scales radius = box_width_fraction * current box width, making the idle radius depth-invariant (near-camera boxes are wider than far ones under this camera's perspective -- measured 65-281px box width range on the cuplock clip). Both thresholds configurable per spec."
+  },
+  "detection": {
+    "model": "yolo11n.pt",
+    "conf_threshold": 0.5,
+    "imgsz": 1088,
+    "iou": 0.5,
+    "classes": [
+      0
+    ],
+    "comment": "class 0 = person only. imgsz raised 640->1088 (native res 2560x1440) to recover detection confidence on far/small people who otherwise drop below conf_threshold and cause a track loss; see HANDOVER.md ID 4->8 swap analysis. iou lowered 0.7->0.5 (ultralytics NMS threshold, not tracker IoU): default 0.7 let two overlapping boxes on the SAME physical person survive as separate detections when standing close together (measured IoU 0.64-0.68 between the duplicate pair at t=54.9s and t=106.6s) -- phantom tracks 7 and 9 in the pre-fix run, confirmed against ground truth of max 2 people on screen via visual check of both frames."
+  },
+  "tracker": {
+    "type": "../task1/src/botsort_tuned.yaml",
+    "comment": "BoT-SORT, thresholds raised (track_high_thresh 0.5, new_track_thresh 0.6, match_thresh 0.85) and track_buffer extended to 150 frames (7.5s @20fps) to survive a confidence dip, not an occlusion -- A/B tested, ReID (with_reid=True, ultralytics>=8.3.114) contributed zero measurable benefit on this clip and could be dropped; buffer+imgsz alone fixed the 4->8 swap. Path is relative to THIS config file's own directory (configs/), not to task1/src/ -- zone_monitor.py resolves tracker.type against the config's parent dir."
+  },
+  "video": {
+    "source": "/home/franklyn/Documents/projects/ajnalens-assignment/raw_footage/task1_cctv/Cuplock-1_CCTV_CCTV_20250823100919_20250823101719_919368_first120s.mp4",
+    "output": "outputs/output_cctv_cuplock.mp4",
+    "events_json": "outputs/events_cctv_cuplock.json",
+    "comment_source": "Absolute path, intentionally OUTSIDE the repo: raw CCTV footage is 115-155MB, over GitHub's soft limits and the assessment's 100MB-in-repo rule. zone_monitor.py resolves a config's video.source relative to the config file's own directory UNLESS it is already absolute, so this still runs as-is; an absolute path on a reviewer's machine will not resolve -- see task1/README.md for how to point this at a locally-supplied clip of their own (any clip >=1min with people, per the assessment's Data requirement, works)."
+  },
+  "_generation": {
+    "generator": "task1/src/detect_crane_zone.py",
+    "sampled_frames": 126,
+    "frame_w": 2560,
+    "frame_h": 1440,
+    "source_fps": 19.925
+  }
+}

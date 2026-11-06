@@ -1,0 +1,358 @@
+[
+  {
+    "question": "Is pump P-102 safe to restart?",
+    "answer": "Based on the current status of pump **P-102**, it is **not safe to restart** at this time.\n\n### Current Equipment Status\n*   **Status:** Stopped\n*   **Active Alarms:** `HIGH_VIBRATION`, `SEAL_LEAK_WARNING`\n*   **Last Service Date:** 2025-03-02\n\n### Manual Safety Procedures and Warnings\nAccording to the operation manuals, the following conditions must be met before restarting:\n\n1.  **Vibration Alarms:** The operation of the pump must be without abnormal vibrations or noises. If these problems are noticed, the pump should be stopped immediately, and the cause must be searched for and corrected before operation continues (source: `pump_manual_centrifugal.pdf`, page 22).\n2.  **Leak Alarms:** The pump must be checked for leaks on a regular basis. If leaks are noticed, the pump must be repaired or replaced immediately (source: `pump_manual_finishthompson_db.pdf`, page 8).\n3.  **Emergency Restarting:** After the causes for an emergency or breakdown have been addressed and resolved, you must follow standard starting procedures for the pump/motor assembly (source: `pump_manual_centrifugal.pdf`, page 5).\n4.  **Rotation Check:** Before restarting, ensure the pump shaft has completely stopped rotating. If the shaft is rotating in the opposite direction (due to a lack of non-return valves), absolutely avoid restarting until the shaft has stopped (source: `pump_manual_centrifugal.pdf`, page 22).\n\n**Conclusion:** You must investigate and resolve the high vibration and seal leak issues before attempting a restart. Once repairs are completed, ensure the pump casing is filled with liquid, as running the pump dry can cause severe damage or a steam explosion (source: `pump_manual_finishthompson_db.pdf`, page 8; `pump_manual_desmi_modular.pdf`, page 10).",
+    "citations": [
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_desmi_modular.pdf",
+        "page": 10
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 5
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 4
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      }
+    ],
+    "tool_calls": [
+      {
+        "name": "get_equipment_status",
+        "args": {
+          "equipment_id": "P-102"
+        },
+        "result": {
+          "equipment_id": "P-102",
+          "status": "stopped",
+          "last_service_date": "2025-03-02",
+          "active_alarms": [
+            "HIGH_VIBRATION",
+            "SEAL_LEAK_WARNING"
+          ]
+        }
+      }
+    ],
+    "id": 1,
+    "expected_behavior": "Should call get_equipment_status(P-102) to check live status/alarms AND cite the manual's restart/vibration/seal procedure."
+  },
+  {
+    "question": "What is the recommended procedure before starting a centrifugal pump for the first time?",
+    "answer": "Before starting a centrifugal pump, the following procedures and checks must be performed according to the operating manual:\n\n### **1. Mandatory Check List Prior to Start-Up**\nAll the following conditions must be met (source: pump_manual_centrifugal.pdf, page 20):\n*   **Manual:** The manual must be completely read and fully understood.\n*   **Piping:** The system must be flushed of foreign particles and welding impurities, and all obstructions must be removed.\n*   **Connections:** All piping and connections must be leak-proof with no external forces or moments applied to the flanges.\n*   **Lubrication:** Both the pump and motor must be properly lubricated, if required.\n*   **Alignment:** Pump/motor alignment must be verified.\n*   **Auxiliaries:** If the mechanical seal requires flushing, it must be connected.\n*   **Valves & Safety:** All valves must be in the correct position, all safety guards must be in place, and the pump Stop switch must be clear and visible.\n*   **Rotation:** The direction of rotation must be checked by jogging the motor.\n\n### **2. Physical and Electrical Preparations**\n*   **Manual Rotation:** Before turning on the power, rotate the pump shaft by hand to ensure the pump rotor is free (source: pump_manual_centrifugal.pdf, page 20).\n*   **Motor Connection:** For magnetic pumps over 3 kW and all other pumps with motor drives greater than 7.5 kW, it is recommended to start using Soft-Starters or Delta-Star connections (source: pump_manual_centrifugal.pdf, page 16).\n\n### **3. Component-Specific Adjustments**\n*   **Packed Stuffing Boxes:** At the first start-up, loosen the nuts of the packing gland to allow a steady flow of liquid to drain out. Once a steady flow is obtained, gradually tighten the nuts until reaching a steady dripping that does not exceed 60\u201370\u00b0C (source: pump_manual_centrifugal.pdf, page 24).\n*   **Safety Equipment:** Ensure personnel are properly dressed (no wide sleeves or jewelry) and wearing necessary safety equipment like hard hats, safety glasses, and safety shoes (source: pump_manual_centrifugal.pdf, page 4).",
+    "citations": [
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 4
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 5
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 29
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 20
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 1
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 24
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 4
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 4
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 4
+      }
+    ],
+    "tool_calls": [],
+    "id": 2,
+    "expected_behavior": "Answerable purely from the manuals (no tool call needed), with citations."
+  },
+  {
+    "question": "What torque setting should I use on the impeller lock nut for the Finish Thompson DB pump?",
+    "answer": "The provided manuals for the Finish Thompson DB pump do not contain information regarding a torque setting for an impeller lock nut.\n\nThe manuals do provide the following torque specifications for other components of the Finish Thompson DB pump:\n*   **Drive to Motor Shaft (Metric Motors):**\n    *   63 frame (M4): 15 in-lb (1.7 N-m)\n    *   71 frame (M5): 30 in-lb (3.4 N-m)\n    *   80 frame (M6): 90 in-lb (10.2 N-m)\n    *   90 frame (M8): 130 in-lb (14.7 N-m) (source: pump_manual_finishthompson_db.pdf, page 10)\n*   **Drive to Motor Shaft (NEMA Motors):** 228 in-lb (25.8 N-m) (source: pump_manual_finishthompson_db.pdf, page 10)\n*   **Motor Adapter Flange:**\n    *   63 frame (M5): 30 in-lb (3.4 N-m)\n    *   71 frame (M6): 90 in-lb (10.2 N-m)\n    *   80 frame (M6): 90 in-lb (10.2 N-m) (source: pump_manual_finishthompson_db.pdf, page 10)\n*   **Securing Pump to Motor:** 60 in-lb (6.8 N-m) (source: pump_manual_finishthompson_db.pdf, page 10)\n\nPlease note that a 60 Nm torque specification is mentioned for impeller tightening in the **DESMI Modular** pump manual (specifically for models S32-25-110N and S50-32-135N), but this does not apply to the Finish Thompson DB pump (source: pump_manual_desmi_modular.pdf, page 9).",
+    "citations": [
+      {
+        "doc": "pump_manual_desmi_modular.pdf",
+        "page": 9
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 11
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 10
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 10
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 9
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 14
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 15
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 11
+      },
+      {
+        "doc": "pump_manual_desmi_modular.pdf",
+        "page": 9
+      },
+      {
+        "doc": "pump_manual_desmi_modular.pdf",
+        "page": 9
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 11
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 11
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 10
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 10
+      }
+    ],
+    "tool_calls": [],
+    "id": 3,
+    "expected_behavior": "The manuals likely do not specify this exact torque value -- the assistant must explicitly say the documents do not contain the answer rather than inventing a number."
+  },
+  {
+    "question": "What are the current active alarms and last service date for pump P-103, and is it currently running?",
+    "answer": "The current status for pump P-103 is as follows:\n*   **Operational Status:** Running\n*   **Active Alarms:** LOW_SUCTION_PRESSURE\n*   **Last Service Date:** 2025-09-28\n\nBased on the operational manuals, you should consider the following regarding its current state:\n\n*   **Alarm and Performance Check:** The manual specifies that the pump's performance should be periodically checked using instruments like gauges and flow meters. If any deterioration in performance or abnormalities (like the current low suction pressure alarm) are noticed, the pump should be stopped immediately to search for the cause and make necessary corrections (source: `pump_manual_centrifugal.pdf`, page 22). \n*   **Shut Down Procedure:** If you need to stop the pump to address the alarm, it is recommended to close the flow regulating valve at the pump discharge prior to stopping to prevent liquid hammer, unless provisions against it are already in place (source: `pump_manual_centrifugal.pdf`, page 22).\n*   **Restart Warning:** If the pump is shut down and the discharge side isolating valve is not completely closed (or if no non-return valve is fitted), the shaft may rotate in the opposite direction. You must absolutely avoid restarting the pump until the shaft has stopped rotating (source: `pump_manual_centrifugal.pdf`, page 22).",
+    "citations": [
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 2
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 32
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 31
+      },
+      {
+        "doc": "pump_manual_desmi_modular.pdf",
+        "page": 13
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 3
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 20
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 3
+      },
+      {
+        "doc": "pump_manual_desmi_modular.pdf",
+        "page": 13
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 3
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 22
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 20
+      }
+    ],
+    "tool_calls": [
+      {
+        "name": "get_equipment_status",
+        "args": {
+          "equipment_id": "P-103"
+        },
+        "result": {
+          "equipment_id": "P-103",
+          "status": "running",
+          "last_service_date": "2025-09-28",
+          "active_alarms": [
+            "LOW_SUCTION_PRESSURE"
+          ]
+        }
+      }
+    ],
+    "id": 4,
+    "expected_behavior": "Should call get_equipment_status(P-103) since this is purely a live-status question."
+  },
+  {
+    "question": "What could cause excessive vibration or noise in a centrifugal pump, and what should the operator do about it?",
+    "answer": "Based on the troubleshooting chart for centrifugal pumps, excessive vibration and noise can be caused by several factors. Below are the possible causes and the recommended actions the operator should take:\n\n### **Mechanical and Installation Issues**\n*   **Pump/Motor Misalignment:** The coupling may be misaligned. The operator should realign the coupling (source: pump_manual_centrifugal.pdf, page 26).\n*   **Piping Stress:** Forces, moments, or piping misalignment may be loading the pump. The operator should realign and support the piping (source: pump_manual_centrifugal.pdf, page 26).\n*   **Loose Components:** The pump or piping may be loose. The operator should torque the bolts as required (source: pump_manual_centrifugal.pdf, page 26).\n*   **Inadequate Foundation:** The baseplate or pump foundation may not be adequate. The operator should change or reinforce the baseplate/foundation following recommended procedures (source: pump_manual_centrifugal.pdf, page 27).\n*   **Incorrect Assembly:** If the pump was recently repaired, it may have been assembled incorrectly. The operator should overhaul the pump and follow correct assembly procedures (source: pump_manual_centrifugal.pdf, page 27).\n\n### **Component Wear or Damage**\n*   **Defective Bearings:** Bearings may be worn out or defective. The operator should replace the bearings (source: pump_manual_centrifugal.pdf, page 26).\n*   **Worn Coupling Inserts:** The coupling rubber inserts may be worn. The operator should replace the inserts (source: pump_manual_centrifugal.pdf, page 26).\n*   **Impeller Imbalance:** The impeller may be out of balance due to wear, deposits, or encrustation. The operator should disassemble, clean, balance, and/or replace the impeller, and consider softening the liquid (source: pump_manual_centrifugal.pdf, page 26).\n*   **Internal Wear:** The pump may be worn out or damaged with excessive internal clearances. An overhaul of the pump is required (source: pump_manual_centrifugal.pdf, page 26).\n\n### **Hydraulic and Operational Issues**\n*   **Cavitation:** If the suction lift or pressure is different than anticipated, the pump may cavitate. The operator should reset the suction lift, increase piping diameter, check valves and filters, or open the suction isolating valve completely (source: pump_manual_centrifugal.pdf, page 26).\n*   **High Inlet Pressure:** If inlet pressure is too high, it should be reduced (without adjusting the isolating valve at the suction side) (source: pump_manual_centrifugal.pdf, page 26).\n*   **Low Flow:** If the pumped flow is less than the minimum required, the operator should increase the flow or adjust the by-pass recirculating valve/line (source: pump_manual_centrifugal.pdf, page 27).\n*   **Pump Seizing:** If seizing is experienced, the operator must stop the pump immediately and check for rotor obstructions (source: pump_manual_centrifugal.pdf, page 26).\n\n### **Monitoring Recommendations**\nTo identify these problems early, the manual recommends using **accelerometers** fitted on the bearing housing. Analysis of vibration diagrams can provide a diagnostic to prevent mechanical breakdowns such as hydraulic cavitation (source: pump_manual_centrifugal.pdf, page 16).",
+    "citations": [
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 26
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 5
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 8
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 11
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 27
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 26
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 26
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 26
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_centrifugal.pdf",
+        "page": 16
+      },
+      {
+        "doc": "pump_manual_finishthompson_db.pdf",
+        "page": 8
+      }
+    ],
+    "tool_calls": [],
+    "id": 5,
+    "expected_behavior": "Answerable from the manuals (troubleshooting/vibration sections) with citations across one or more documents."
+  }
+]

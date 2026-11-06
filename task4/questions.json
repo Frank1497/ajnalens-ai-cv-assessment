@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Is pump P-102 safe to restart?",
+    "expected_behavior": "Should call get_equipment_status(P-102) to check live status/alarms AND cite the manual's restart/vibration/seal procedure."
+  },
+  {
+    "id": 2,
+    "question": "What is the recommended procedure before starting a centrifugal pump for the first time?",
+    "expected_behavior": "Answerable purely from the manuals (no tool call needed), with citations."
+  },
+  {
+    "id": 3,
+    "question": "What torque setting should I use on the impeller lock nut for the Finish Thompson DB pump?",
+    "expected_behavior": "The manuals likely do not specify this exact torque value -- the assistant must explicitly say the documents do not contain the answer rather than inventing a number."
+  },
+  {
+    "id": 4,
+    "question": "What are the current active alarms and last service date for pump P-103, and is it currently running?",
+    "expected_behavior": "Should call get_equipment_status(P-103) since this is purely a live-status question."
+  },
+  {
+    "id": 5,
+    "question": "What could cause excessive vibration or noise in a centrifugal pump, and what should the operator do about it?",
+    "expected_behavior": "Answerable from the manuals (troubleshooting/vibration sections) with citations across one or more documents."
+  }
+]

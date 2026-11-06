@@ -1,0 +1,4 @@
+Task 1 annotated output video (output_cctv_cuplock.mp4, ~246 MB) --
+exceeds GitHub's 100 MB file limit, hosted on Google Drive instead.
+
+https://drive.google.com/file/d/1s1uw7V3XwCfYOsajnlbEMFUM3HcBtn0C/view?usp=drive_link

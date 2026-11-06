@@ -62,18 +62,22 @@ duplicated here to avoid two copies of a 250MB video drifting out of sync.
 
 Everything the spec requires to be configurable, is:
 
-| Key | Value | Purpose |
-|---|---|---|
-| `zone.polygon` | 4-point polygon, auto-generated (see below) | Restricted-area definition |
-| `zone.exit_grace_sec` | 2.0 | Seconds a track can be briefly undetected before its zone/idle state is force-closed. Frame-count based (`round(exit_grace_sec * source_fps)`), never wall-clock `time.time()` -- deterministic regardless of processing speed |
-| `idle.pixel_threshold` | 25 | Flat-pixel idle radius, used when `radius_mode="fixed"` |
-| `idle.seconds_threshold` | 5.0 | IDLE_ALERT window length |
-| `idle.radius_mode` | `"box_width_fraction"` | Idle radius scales with the person's current box width instead of a flat pixel count (see HANDOVER.md for why) |
-| `idle.box_width_fraction` | 0.25 | Radius = 0.25 x box width when `radius_mode="box_width_fraction"` |
-| `detection.imgsz` | 1088 | YOLO inference resolution (native clip res is 2560x1440) |
-| `detection.iou` | 0.5 | NMS IoU threshold -- lowered from Ultralytics' 0.7 default to kill duplicate overlapping boxes on the same person (see HANDOVER.md) |
-| `detection.conf_threshold` | 0.5 | Detection confidence floor |
-| `tracker.type` | `botsort_tuned.yaml` | Tuned BoT-SORT config (`task1/src/botsort_tuned.yaml`), raised thresholds + `track_buffer: 150` frames + ReID enabled |
+
+| Key                        | Value                                       | Purpose                                                                                                                                                                                                                        |
+| -------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `zone.polygon`             | 4-point polygon, auto-generated (see below) | Restricted-area definition                                                                                                                                                                                                     |
+| `zone.exit_grace_sec`      | 2.0                                         | Seconds a track can be briefly undetected before its zone/idle state is force-closed. Frame-count based (`round(exit_grace_sec * source_fps)`), never wall-clock `time.time()` -- deterministic regardless of processing speed |
+| `idle.pixel_threshold`     | 25                                          | Flat-pixel idle radius, used when `radius_mode="fixed"`                                                                                                                                                                        |
+| `idle.seconds_threshold`   | 5.0                                         | IDLE_ALERT window length                                                                                                                                                                                                       |
+| `idle.radius_mode`         | `"box_width_fraction"`                      | Idle radius scales with the person's current box width instead of a flat pixel count (see HANDOVER.md for why)                                                                                                                 |
+| `idle.box_width_fraction`  | 0.25                                        | Radius = 0.25 x box width when `radius_mode="box_width_fraction"`                                                                                                                                                              |
+| `detection.imgsz`          | 1088                                        | YOLO inference resolution (native clip res is 2560x1440)                                                                                                                                                                       |
+| `detection.iou`            | 0.5                                         | NMS IoU threshold -- lowered from Ultralytics' 0.7 default to kill duplicate overlapping boxes on the same person (see HANDOVER.md)                                                                                            |
+| `detection.conf_threshold` | 0.5                                         | Detection confidence floor                                                                                                                                                                                                     |
+| `tracker.type`             | `botsort_tuned.yaml`                        | Tuned BoT-SORT config (`task1/src/botsort_tuned.yaml`), raised thresholds + `track_buffer: 150` frames + ReID enabled                                                                                                          |
+
+
+
 
 ### Zone polygon: data-driven, not hand-picked
 
@@ -110,6 +114,7 @@ guaranteed closed (`stop_frame`/`stop_sec` never `null`) -- verified
 directly against the JSON, not just by log output.
 
 Example record:
+
 ```json
 {
   "event": "ZONE_ENTRY",
@@ -123,7 +128,11 @@ Example record:
 }
 ```
 
+
+
 ## Answers to required questions
+
+
 
 ### Why use the foot point instead of the box centre?
 
@@ -156,26 +165,13 @@ This was built and verified this session, not just designed on paper. Three
 separate levers were tested on a confirmed real ID swap (track 4 -> 8,
 person continuously visible the whole time, never actually occluded):
 
-1. **`track_buffer`** (BoT-SORT/ByteTrack parameter): the tracker keeps a
-   "lost" track alive for this many frames before assigning a brand-new ID
+1. `track_buffer` (BoT-SORT/ByteTrack parameter): the tracker keeps a
+  "lost" track alive for this many frames before assigning a brand-new ID
    on re-detection. Default was 30 frames (1.5s @20fps) -- too short for a
    2+ second gap. Raised to 150 frames (7.5s @20fps). This alone fixed the
    confirmed swap.
-2. **Detection confidence/resolution**: the swap's root cause was not
-   occlusion at all -- it was the person's detection confidence dropping
-   below `conf_threshold` for an extended stretch while partially
-   obstructed by crane machinery, not missing frames from being hidden.
-   Raising `imgsz` from 640 to 1088 (native-resolution inference) raised
-   the measured confidence floor during that window from 0.15 to 0.53,
-   closing most of the gap before the tracker buffer even needed to help.
-3. **ReID (appearance embeddings)**: tested explicitly via A/B comparison
-   (`with_reid=True` vs `False`, identical buffer/imgsz). Result: **zero
-   measurable difference** in this scene -- same track IDs, same
-   boundaries. ReID only helps disambiguate when two candidate boxes
-   compete for a match; in a max-2-3-person scene with no overlapping
-   detections at the gap, there was nothing for appearance matching to
-   disambiguate. Documented as an honest negative result rather than
-   claimed as a fix.
+2. **Using other strong REID trackers  lke DeepSORT or BOXMOT libraries**  
+**or even train trackers for custom different camera angles** 
 
 **For a true 2-second full occlusion** (the person genuinely behind an
 opaque object, not just a confidence dip), the correct fix is specifically

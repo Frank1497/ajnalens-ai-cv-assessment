@@ -1,0 +1,49 @@
+{
+  "engines": {
+    "easyocr/tuned": {
+      "overall": 37.0,
+      "field_accuracy": {
+        "equipment_id": 35.0,
+        "serial_number": 20.0,
+        "model": 5.0,
+        "voltage": 45.0,
+        "manufacture_date": 80.0
+      },
+      "non_null": 20.77922077922078,
+      "non_null_hit": 16,
+      "non_null_total": 77,
+      "serial_number_avg_cer": 0.7857142857142857,
+      "n_serial_with_gt": 16
+    },
+    "tess_psm4/tuned": {
+      "overall": 29.0,
+      "field_accuracy": {
+        "equipment_id": 25.0,
+        "serial_number": 25.0,
+        "model": 5.0,
+        "voltage": 20.0,
+        "manufacture_date": 70.0
+      },
+      "non_null": 9.090909090909092,
+      "non_null_hit": 7,
+      "non_null_total": 77,
+      "serial_number_avg_cer": 0.9375,
+      "n_serial_with_gt": 16
+    },
+    "paddle/tuned": {
+      "overall": 69.0,
+      "field_accuracy": {
+        "equipment_id": 65.0,
+        "serial_number": 75.0,
+        "model": 50.0,
+        "voltage": 65.0,
+        "manufacture_date": 90.0
+      },
+      "non_null": 59.74025974025974,
+      "non_null_hit": 46,
+      "non_null_total": 77,
+      "serial_number_avg_cer": 0.2598684210526316,
+      "n_serial_with_gt": 16
+    }
+  }
+}

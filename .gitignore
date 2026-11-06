@@ -11,3 +11,15 @@ node_modules/
 .ipynb_checkpoints/
 *.log
 .DS_Store
+
+# Internal working-state notes, not reviewer-facing -- see each task's README.md instead.
+HANDOVER.md
+
+# Local build artifacts / toolchains, not source -- re-buildable per task3/README.md,
+# not a deliverable.
+.tools/
+.venv_paddle_cpu/
+.pytest_cache/
+
+# Private demo-recording notes, not reviewer-facing.
+DEMO_SCRIPT.md

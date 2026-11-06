@@ -1,0 +1,5 @@
+Task 2 PPE-on-CCTV annotated output video (output_cctv_cuplock_ppe.mp4,
+~248 MB) -- exceeds GitHub's 100 MB file limit, hosted on Google Drive
+instead.
+
+https://drive.google.com/file/d/1ruc2eHP2SXuR3LZC7xiVPNqTDGCzopS-/view?usp=sharing

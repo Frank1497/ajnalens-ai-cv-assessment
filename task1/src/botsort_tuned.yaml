@@ -1,0 +1,17 @@
+# tuned BoT-SORT + ReID for low-density CCTV scene (max ~2-3 people), static overhead camera
+# track_buffer raised 30->150 (7.5s @20fps): this scene has a real person whose detection
+# confidence drops below conf_threshold for >30s while walking to the back of frame (not an
+# occlusion/ID-swap bug -- confirmed visually, person never leaves camera view). A short buffer
+# forces a brand-new track ID once the gap exceeds it; this buffer is sized to survive that gap.
+tracker_type: botsort
+track_high_thresh: 0.5
+track_low_thresh: 0.1
+new_track_thresh: 0.6
+track_buffer: 150
+match_thresh: 0.85
+fuse_score: True
+gmc_method: sparseOptFlow
+proximity_thresh: 0.5
+appearance_thresh: 0.25
+with_reid: True
+model: auto  # requires ultralytics>=8.3.114 native ReID support; reuses detector features

@@ -1,0 +1,11 @@
+# Isolated PaddleOCR environment for task3/src/paddle_worker.py (NOT the main .venv).
+# Kept separate so paddle's numpy/opencv pins never touch the torch/ultralytics stack.
+#   uv venv .venv_paddle_cpu --python 3.11
+#   VIRTUAL_ENV=.venv_paddle_cpu uv pip install -r task3/requirements_paddle.txt
+# GPU build (optional, ~3.3 GB wheel from Baidu's index, CUDA 12.9):
+#   uv venv .venv_paddle --python 3.11
+#   VIRTUAL_ENV=.venv_paddle uv pip install paddlepaddle-gpu==3.4.0 \
+#     -i https://www.paddlepaddle.org.cn/packages/stable/cu129/ --extra-index-url https://pypi.org/simple \
+#     --index-strategy unsafe-best-match && VIRTUAL_ENV=.venv_paddle uv pip install "paddleocr[doc-parser]==3.7.0"
+paddlepaddle==3.2.2
+paddleocr[doc-parser]==3.7.0

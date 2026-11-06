@@ -1,0 +1,26 @@
+{
+  "replaced": {
+    "nameplate_01.jpg": "022.jpg",
+    "nameplate_03.jpg": "025.jpg",
+    "nameplate_05.jpg": "030.jpg",
+    "nameplate_07.jpg": "035.jpg",
+    "nameplate_08.jpg": "041.jpg",
+    "nameplate_10.jpg": "042.jpg",
+    "nameplate_011.jpg": "047.jpg",
+    "nameplate_012.jpg": "072.jpg",
+    "nameplate_014.jpg": "077.jpg",
+    "nameplate_015.jpg": "082.jpg",
+    "nameplate_016.jpg": "092.jpg",
+    "nameplate_017.jpg": "096.jpg"
+  },
+  "kept": [
+    "nameplate_02.jpg",
+    "nameplate_04.jpg",
+    "nameplate_06.jpg",
+    "nameplate_09.jpg",
+    "nameplate_013.jpg",
+    "nameplate_018.jpg",
+    "nameplate_019.jpg",
+    "nameplate_020.jpg"
+  ]
+}

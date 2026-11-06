@@ -1,0 +1,433 @@
+{
+ "dataset": "task3/data/nameplates_v2",
+ "ground_truth": "task3/data/nameplates_v2/labels_ground_truth.csv",
+ "note": "null means the field was not found in the OCR text. Values are not guessed.",
+ "engines": {
+  "easyocr": {
+   "nameplate_01.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_011.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_012.jpg": {
+    "equipment_id": null,
+    "serial_number": "20190906385",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_013.jpg": {
+    "equipment_id": "M3538",
+    "serial_number": null,
+    "model": "34461-872",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_014.jpg": {
+    "equipment_id": "RRI BEAD",
+    "serial_number": "36119190001717202",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_015.jpg": {
+    "equipment_id": "MLGC 222",
+    "serial_number": "75T707019",
+    "model": "MLGC 222",
+    "voltage": "240",
+    "manufacture_date": null
+   },
+   "nameplate_016.jpg": {
+    "equipment_id": "E829",
+    "serial_number": null,
+    "model": "SKS184BCT2O5B",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_017.jpg": {
+    "equipment_id": "ALJH-52",
+    "serial_number": null,
+    "model": "ALJH-52",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_018.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_019.jpg": {
+    "equipment_id": "SHDC",
+    "serial_number": "FM14015624040001",
+    "model": "FM140156",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "nameplate_02.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_020.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": "415",
+    "manufacture_date": null
+   },
+   "nameplate_03.jpg": {
+    "equipment_id": "00536ET3EI84N-W22 7AB32019",
+    "serial_number": null,
+    "model": "00536ET3EI84N-W22 7AB32019",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_04.jpg": {
+    "equipment_id": "HSAAZSRC308",
+    "serial_number": "2W05ZK40-006",
+    "model": "HSAAZSRC308",
+    "voltage": "460",
+    "manufacture_date": "2013.03"
+   },
+   "nameplate_05.jpg": {
+    "equipment_id": "3644031330-ADK008436",
+    "serial_number": "363C2420392154",
+    "model": null,
+    "voltage": "380/660",
+    "manufacture_date": null
+   },
+   "nameplate_06.jpg": {
+    "equipment_id": "370776185961",
+    "serial_number": null,
+    "model": "370776185961",
+    "voltage": "208-230/460",
+    "manufacture_date": null
+   },
+   "nameplate_07.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_08.jpg": {
+    "equipment_id": null,
+    "serial_number": "301I5970012EE514",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_09.jpg": {
+    "equipment_id": "700LLBETBELAJT W22",
+    "serial_number": null,
+    "model": "700LLBETBELAJT W22",
+    "voltage": "380",
+    "manufacture_date": null
+   },
+   "nameplate_10.jpg": {
+    "equipment_id": "FHSTB DVII2MGZBMG",
+    "serial_number": "96.01012530.01.0001.05.06",
+    "model": "FHSTB DVII2MGZBMG",
+    "voltage": "380",
+    "manufacture_date": null
+   }
+  },
+  "tesseract": {
+   "nameplate_01.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_011.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_012.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_013.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_014.jpg": {
+    "equipment_id": null,
+    "serial_number": "EGIJIGI90001717202",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_015.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_016.jpg": {
+    "equipment_id": "5KS184BCT205B",
+    "serial_number": null,
+    "model": "5KS184BCT205B",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_017.jpg": {
+    "equipment_id": "TROA",
+    "serial_number": null,
+    "model": "TROA",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_018.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_019.jpg": {
+    "equipment_id": "SHDC",
+    "serial_number": "FM.14015624040001",
+    "model": "FM140156",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "nameplate_02.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_020.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_03.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_04.jpg": {
+    "equipment_id": null,
+    "serial_number": "2W057K40-006",
+    "model": null,
+    "voltage": "380",
+    "manufacture_date": "2013"
+   },
+   "nameplate_05.jpg": {
+    "equipment_id": null,
+    "serial_number": "3G3C2120397154",
+    "model": null,
+    "voltage": "400",
+    "manufacture_date": null
+   },
+   "nameplate_06.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_07.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_08.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_09.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_10.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   }
+  },
+  "paddleocr": {
+   "nameplate_01.jpg": {
+    "equipment_id": "MY 7124",
+    "serial_number": "1202190103",
+    "model": "MY 7124",
+    "voltage": "230",
+    "manufacture_date": null
+   },
+   "nameplate_011.jpg": {
+    "equipment_id": "365T",
+    "serial_number": null,
+    "model": "A36-8063-4076",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_012.jpg": {
+    "equipment_id": null,
+    "serial_number": "20190906385",
+    "model": "GSA632-4",
+    "voltage": "220/380",
+    "manufacture_date": null
+   },
+   "nameplate_013.jpg": {
+    "equipment_id": "M3538",
+    "serial_number": "W1012031368",
+    "model": "34A61-872",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_014.jpg": {
+    "equipment_id": "H6343 161430-ADD",
+    "serial_number": "3G1J19190001717202",
+    "model": null,
+    "voltage": "400",
+    "manufacture_date": "2019"
+   },
+   "nameplate_015.jpg": {
+    "equipment_id": null,
+    "serial_number": "HS1407019",
+    "model": "ML56C-2-22",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "nameplate_016.jpg": {
+    "equipment_id": "E829",
+    "serial_number": null,
+    "model": "5KS184BCT205B",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_017.jpg": {
+    "equipment_id": null,
+    "serial_number": "D077015-1",
+    "model": "AEJH-S2",
+    "voltage": null,
+    "manufacture_date": "2007"
+   },
+   "nameplate_018.jpg": {
+    "equipment_id": "1LG4 206-2AA60-Z",
+    "serial_number": null,
+    "model": "1LG4 206-2AA60-Z",
+    "voltage": "400/690",
+    "manufacture_date": null
+   },
+   "nameplate_019.jpg": {
+    "equipment_id": "SHDC",
+    "serial_number": "FM14015624040001",
+    "model": "FM140156",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "nameplate_02.jpg": {
+    "equipment_id": "DI0034PCI",
+    "serial_number": null,
+    "model": "DI0034PCI",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "nameplate_020.jpg": {
+    "equipment_id": "0.75KNE4FLG",
+    "serial_number": null,
+    "model": null,
+    "voltage": "415",
+    "manufacture_date": null
+   },
+   "nameplate_03.jpg": {
+    "equipment_id": "00536ET3E184JM-W22",
+    "serial_number": "1048518705",
+    "model": "00536ET3E184JM-W22",
+    "voltage": "230/460",
+    "manufacture_date": "17ABR2019"
+   },
+   "nameplate_04.jpg": {
+    "equipment_id": "HHI150-12-447T",
+    "serial_number": "2W057K40-006",
+    "model": "HLS447SR0608",
+    "voltage": "460",
+    "manufacture_date": "2013.03"
+   },
+   "nameplate_05.jpg": {
+    "equipment_id": "3GAA081330-ADK",
+    "serial_number": "3G3C2120397154",
+    "model": "M3AA 80MC2",
+    "voltage": "690,400,660,380,415,460",
+    "manufacture_date": null
+   },
+   "nameplate_06.jpg": {
+    "equipment_id": "094914",
+    "serial_number": "F0911183105",
+    "model": "37J776T859G1",
+    "voltage": "208-230/460",
+    "manufacture_date": null
+   },
+   "nameplate_07.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": "DVE 80",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "nameplate_08.jpg": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": "415",
+    "manufacture_date": null
+   },
+   "nameplate_09.jpg": {
+    "equipment_id": "00118ET3E143T-W22",
+    "serial_number": "1053523260",
+    "model": "00118ET3E143T-W22",
+    "voltage": "230/460",
+    "manufacture_date": "15ABR2020"
+   },
+   "nameplate_10.jpg": {
+    "equipment_id": null,
+    "serial_number": "96.01012530.01.0001.05.06",
+    "model": "FH57B DV112M4/BMG",
+    "voltage": "380-460",
+    "manufacture_date": null
+   }
+  }
+ }
+}

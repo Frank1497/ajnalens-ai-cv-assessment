@@ -1,0 +1,2790 @@
+{
+ "easyocr/tuned": {
+  "nameplate_01.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "SINGLE PHASE C",
+    "INDUCTION Motor",
+    "JYAE Mm2I",
+    "05 HP 037 G INSCL",
+    "20 287 30",
+    "80 K 0",
+    "Fod Ec: 120219010}"
+   ]
+  },
+  "nameplate_011.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "3ALDOR RELIANCER",
+    "Soe7 SEvEREDUTY XEX",
+    "G 351 Eouifecd VltH I20",
+    "Lc A33-8063_4076 PHASE 3 Desigh 3 MPE",
+    "8 HP MOLTS2207460 AVB 70 \"CS",
+    "RPM [785 ANPS 171785 6 Hz6-&0 Duty cdit 0_",
+    "65100320X IENcL TC Code",
+    "651003Jw0X 95",
+    "72408022002",
+    "Variar iTorque]",
+    "'WPvK INVERTER IP5S PONER",
+    "15 St_ON SINEVAVE Voic %5 Is",
+    "UssuitIRr 4",
+    "dVER JelP Prot 3 Tugo IuSa Npzun",
+    "7 ~Suit. Ar;",
+    "B4tor [LEcTNC Co"
+   ]
+  },
+  "nameplate_012.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "20190906385",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "20190906385",
+      "conf": 0.1700085558911835,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "THREE PHASE ce",
+    "INDUCTION MOTOR",
+    "I 61632 0.18 Kw70. 28HP",
+    "65 Br 5 % 220/380",
+    "C03 0,73 J3JOMLS 4&",
+    "08 E46 No:20190906385",
+    "30 901 TEC 600341"
+   ]
+  },
+  "nameplate_013.jpg": {
+   "fields": {
+    "equipment_id": "M3538",
+    "serial_number": null,
+    "model": "34461-872",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "M3538",
+      "conf": 0.3864452245781041,
+      "anchored": true,
+      "rule": "NO-short"
+     }
+    ],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "34461-872",
+      "conf": 0.729279188369417,
+      "anchored": true,
+      "rule": "SPEC"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.8218343767922214,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "208",
+      "conf": 0.8534265651199363,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "EALDORHeLUNDEI",
+    "(NDusiriai MOi",
+    "CA No M3538",
+    "SPEC 34461-872",
+    "HP 1/2",
+    "VOLTS 230/460",
+    "AMPS 2/1",
+    "RPM: 1725",
+    "FRAME 56 HZ 60 PH 3",
+    "SER; F 1.25 ICODE L DES B CLASS B",
+    "NEMA NOM: EFF. 74 % PF 63",
+    "1 RATING 40C. AMB-CONT",
+    "CC USABLE AT '208v/2.5 A Q",
+    "BEARINGSIDE]6203 ODEl6203",
+    "ENCL TEFC ISN W1012031368",
+    "SFA 2.4/1.2",
+    "BALDOR ELECTRICEcO Smih; AR MfgsIN USA",
+    "Np1256l"
+   ]
+  },
+  "nameplate_014.jpg": {
+   "fields": {
+    "equipment_id": "RRI BEAD",
+    "serial_number": "36119190001717202",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "RRI BEAD",
+      "conf": 0.3851381573455756,
+      "anchored": true,
+      "rule": "PROD CODE"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "36119190001717202",
+      "conf": 0.6260635698467047,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "1S;12615",
+    "C\u20ac IE3",
+    "CML.9512389024",
+    "M2BKIMCZ TMb3mmmooL",
+    "3 Motor",
+    "Year ol Mg: 2oig No 36119190001717202",
+    "Amb 60 C Ins. cl F IP55",
+    "V Hz rImin kW bp A COS Eft Duty",
+    "400 D 50 P950 185 95 0 @9EA St",
+    "#o% 45?",
+    "Prod. code RRI BEAD",
+    "Nmax rImin",
+    "2763 620927263 Oua kg",
+    "IEC 60034-1 IS 12615 ."
+   ]
+  },
+  "nameplate_015.jpg": {
+   "fields": {
+    "equipment_id": "MLGC 222",
+    "serial_number": "75T707019",
+    "model": "MLGC 222",
+    "voltage": "240",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "75T707019",
+      "conf": 0.6727405833510145,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "MLGC 222",
+      "conf": 0.8090672039003731,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "240",
+      "conf": 0.8654409291019547,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "REMX SINGLE PHASE (\u20ac",
+    "INDUCtion MOTOR",
+    "TYPE MLGC 222 INS CL F IP 55",
+    "Kw 22 rImin 2850",
+    "HP 3 50 uF 350",
+    "V 240 A 129 250 uF 300",
+    "Hz 50 S1 No. 75T707019"
+   ]
+  },
+  "nameplate_016.jpg": {
+   "fields": {
+    "equipment_id": "E829",
+    "serial_number": null,
+    "model": "SKS184BCT2O5B",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "E829",
+      "conf": 0.9018092500274792,
+      "anchored": true,
+      "rule": "NO-short"
+     }
+    ],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "SKS184BCT2O5B",
+      "conf": 0.9018092500274792,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9063481008513973,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "MODEL SKS184BCT2O5B HP 5 PHASE 3 NO. E829",
+    "MAX KVAR 1.1 SF 1.15 RATING CONT.",
+    "VOLTS 230/460 RPM 1750 Hhertz 60",
+    "UNS AMP 123/6.15 POWER FACTORI 35.,3 Mvi Kmeee. 88.5",
+    "ciiss F MAX AMB 40 CnnECTiON",
+    "FRAME 184T DLSIGN Nema A",
+    "ENCL TE TYPE KCODE J 185968",
+    "] E END 6306ZZ 69",
+    "BR&ewo 6306ZZ FpC 1c2030",
+    "SERNO. 0OO",
+    "2554, ONP NETworKS 'OV LINE 4SOV ILINE",
+    "ALT RATING:SF 13.6 AMP",
+    "MAXAME,",
+    "GE PC WeighT 1014 Ib",
+    "Motors Enerov Seves"
+   ]
+  },
+  "nameplate_017.jpg": {
+   "fields": {
+    "equipment_id": "ALJH-52",
+    "serial_number": null,
+    "model": "ALJH-52",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "ALJH-52",
+      "conf": 0.610728575913068,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "PREMUM EFFICIENCY",
+    "3-PHASESEVERE DUTY MOTOR",
+    "TYPE ALJH-52 FRAME 6000",
+    "POLES OUIPUL Iobd HP KW",
+    "VOLTS Eco/ucHz C0 RATING Colt",
+    "9 3 AMPS LOI S F LU INS 1",
+    "1 NOM EFE 060k MIN: EFE",
+    "RPM 660 OESiGN 9 AMB",
+    "DAIE 207 BEABINGS REMDSAA 1",
+    "Ip SERNQ Doala",
+    "WEIGHT e100 KGs",
+    "TECQ Westinghouse",
+    "Neo T 0 R 6 0 M p A nY",
+    "Aound aock Texas"
+   ]
+  },
+  "nameplate_018.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "SieMEns 3C EEx T#ECe",
+    "D 9106 EUMNN U OENIENNLA Ta keu",
+    "514206 -2160-241 KW 6osqlimo|Www| TE S Cedhk IP",
+    "HZEx m4 Il T3 A FTZU 05_ 55",
+    "400 ^ 50 52 p28,80,882954 IATEX 0007|",
+    "690 30",
+    "EECEN 629-15 Cex Mi2059",
+    "ECEN 6031",
+    "~CJo<tu5c"
+   ]
+  },
+  "nameplate_019.jpg": {
+   "fields": {
+    "equipment_id": "SHDC",
+    "serial_number": "FM14015624040001",
+    "model": "FM140156",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "FM14015624040001",
+      "conf": 0.8099586831339505,
+      "anchored": true,
+      "rule": "SER NO"
+     }
+    ],
+    "model": [
+     {
+      "value": "FM140156",
+      "conf": 0.815263532599837,
+      "anchored": true,
+      "rule": "MODEL"
+     },
+     {
+      "value": "SHDC",
+      "conf": 0.9853060955253564,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "115/230",
+      "conf": 0.8939957597857409,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "230",
+      "conf": 0.5308040831854915,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "SINGLE PHASE 257207",
+    "INDUCTION MOTOR US",
+    "MODEL: FM 140156",
+    "ISO9001 C\u20ac",
+    "Ser No::FM 14015624040001",
+    "TYPE: SHDC HP: 1 HZ: 60",
+    "VOLT-115/230V PH-1 RPM- 1725",
+    "ENC-TEFC FLA-13.6/6.8A FR- 56",
+    "INS -F SF-1.15 DES-AMB-408C",
+    "CODE-L DUTY- CONT ROT-CW-CCW",
+    "T15v 230v",
+    "LUBRICATION",
+    "T5 LINE 1 TS LINe1",
+    "BEARINGS T1 Ti LINE2",
+    "PRELUBRICATED T3 LINE? T8",
+    "NO FURTHER T8 T2",
+    "T2 T3 INS",
+    "LUBRICATION T4 T6",
+    "NECESSARY T6 77 INS T4 T77 INS",
+    "T9e T8 INS",
+    "CHLANGED From CcwTocw is The ExchaNGE Of 0 AND 8",
+    "MADEIN ChIra"
+   ]
+  },
+  "nameplate_02.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9173850101851676,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "MODEL NO_ DIO034PCI",
+    "VOLTS 230/460 AMP 7.8/3.9",
+    "HP 3 ENCL TEFC (IP65) FRAME NO 182TC",
+    "FIL RPM 1760 MAX. AMB 40 % SERVICE FACTOR 1.15",
+    "INS H TIME RATING CONT BRG DE 6306 VV",
+    "3-PHASE KVA CODE K NO, ODE 6206 VV",
+    "Hz 60 EFFICIENCY 89.5% NEMA DESIGN B",
+    "HMNY PROTECIED LOW VOLTS HIGH VOLTS P1 P2o",
+    "40 nuun HOIECION",
+    "TO NItO",
+    "00 3 Eunift 'MnHAT OmMCT Ml",
+    "Cnd nEOMIROLE OMBDAD"
+   ]
+  },
+  "nameplate_020.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": "415",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [
+     {
+      "value": "415",
+      "conf": 0.850162146997187,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "CG Power and Industrial Solutions Ltd",
+    "(\u20ac 3 PHASE INDUCTION MOTOR IS L2615",
+    "MACHINE O7SKNEAFLG FRAME ND 80 CMIL_ 7uooonAiz",
+    "Ipss KW(HP) : 0.75(1.00) RPM 1410",
+    "IC4TI EfFF (IE2) : 79.60% DUTY : S1",
+    "VOLT : 415+10% AMP 1.82Y PF 0.72",
+    "BRG DEJNDE 620477/62042Z Hz 5015%",
+    "REF XEGM27571 WT: 17 16KG AMB 50'C",
+    "ISIEC-60034 THCL : FIB CONN DIAG : 201 dobi"
+   ]
+  },
+  "nameplate_03.jpg": {
+   "fields": {
+    "equipment_id": "00536ET3EI84N-W22 7AB32019",
+    "serial_number": null,
+    "model": "00536ET3EI84N-W22 7AB32019",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "00536ET3EI84N-W22 7AB32019",
+      "conf": 0.09937254869463598,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "022",
+    "[ed CCOZIA Brcniium Invanor Duty Motor 2034382",
+    "Sovont Duly",
+    "Mu Maoco VODEL;00536ET3EI84N-W22 7AB32019 _1048518705 _",
+    "PH S FR 1B2JL4JM HPL_ 5 37 Hz 60 SE L2 PE 0.89",
+    "V230/4460 A 5.90 RPM 3485 INS CL [ DI: 80 K 4P5S",
+    "NEMA NOM EFF885 DES BIDU) CONIZ 34B407",
+    "ENCL TEFC IEP 8 138_ USABLE_e2o8v L3LA SF_LJ5_SFA 15 1",
+    "5 OHP 3 SOHz_SBOV_2.144 2850RPM: SF].25 EFF_B657 (IE2)cODE",
+    "olb 0 T6 014 0/5 076 6307-Z",
+    "b17 o18 pl9 3 817 0158 8i9 546-1",
+    "8 8T1 P12 613 8 oti 012 9i3 MOBI   POLYREX *",
+    "LI 12 L3 I4 L L5",
+    "AIaood",
+    "For  60Hz Class | Div 2, Gr 4 B. C dnd 0 TS",
+    "Class L Zon 2 Ic 15' US",
+    "Closs Il, Dwv 2 Fand 6 75",
+    "Iot: Useon Pmv' Gf_ 4 B,C, D; f ard For Safe 4r3",
+    "Vttooo:1 ; Ct20:1 L.0S5, Ta MOD EEIEMXCN"
+   ]
+  },
+  "nameplate_04.jpg": {
+   "fields": {
+    "equipment_id": "HSAAZSRC308",
+    "serial_number": "2W05ZK40-006",
+    "model": "HSAAZSRC308",
+    "voltage": "460",
+    "manufacture_date": "2013.03"
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "2W05ZK40-006",
+      "conf": 0.5388324369510444,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "HSAAZSRC308",
+      "conf": 0.2892486271116171,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "460",
+      "conf": 0.544237143439674,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": [
+     {
+      "value": "2013.03",
+      "conf": 0.5388324369510444,
+      "anchored": true,
+      "rule": "DATE/YEAR-anchor"
+     }
+    ]
+   },
+   "lines": [
+    "Crown Triton ee (\u20ac",
+    "Prenk Enclansy AC 3 Parte [otor 2 Ce Ccor84",
+    "ISOHP 6P 460v Col HHI150-12-447T",
+    "ModeL HSAAZSRC308 _ Encl MEFC Amps_ 16954",
+    "Frome A Dutx CONT Code 6 Henz 60Hz",
+    "Kype HS Gla 9583_",
+    "Dnve Nu31 SE 16 RpM 1185_",
+    "Beoring Cpp: 631603 8 Amb J1",
+    "Usable D4 SAB_ 96.03",
+    "ot EOHz EOHP 280V208.D4 985rom 8 F44,0Ell49 33 Code 02 PLE Ler KR 3Ha",
+    "CSA LZFEPA7S3608 CUSS 1 Dren 2. Coups AbIC ond 0 Temo: Cox Laas 3u0 E (1o",
+    "cetand Ve QSS hZoce 2 Cto4ee IAIB_ond_IC Leese [e9 Kt",
+    "No: 2Wo5zK4O-006 Dote 2013.03 Hcighl 19701b",
+    "40-105797 3\" In Koea Hi HYUNDAI 00ec\""
+   ]
+  },
+  "nameplate_05.jpg": {
+   "fields": {
+    "equipment_id": "3644031330-ADK008436",
+    "serial_number": "363C2420392154",
+    "model": null,
+    "voltage": "380/660",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "3644031330-ADK008436",
+      "conf": 0.5761162508576354,
+      "anchored": true,
+      "rule": "PROD CODE"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "363C2420392154",
+      "conf": 0.3735985216086404,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [
+     {
+      "value": "660",
+      "conf": 0.5827268405420981,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "380",
+      "conf": 0.5182275393953656,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "380/660",
+      "conf": 0.5504771899687319,
+      "anchored": true,
+      "rule": "VOLT-conn-pair"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "An8 $9 [ 0 0 0",
+    "94#P 4lkylon477 (\u20ac",
+    "95 Oz04tundror torll Pobnd",
+    "Ie3",
+    "37 Motor MZAA 8OMC 2 IMB3/M21OI Ju",
+    "No.363C2420392154 Im.CL F IP5S",
+    "V HI Lw rImlo A Cos Duty",
+    "6901 50 11 2883 4330 0.81 SL",
+    "aood 5Q L1 2883 2,200 0.81 Sl",
+    "660y 50 L 2868 L360 0,84 SI",
+    "380D S0 1 2868 2.300 0.84 S1",
+    "Ai50 S0 1 2895 2,300 0,78 SI",
+    "A60d 60 41 3500 2000 0.78 S1",
+    "Sohz I83 82 7Kloos 82 9253) 821*(SO",
+    "60H1z IE? 84.0n(1003) 83.0% (7596) 80.2* (Sor",
+    "CCO31A NEMA NoM EE&404",
+    "Prod. Code 3644031330-ADK008436",
+    "6201 -27/6 6203.27/8 J0ke",
+    "Iec 6oolL]"
+   ]
+  },
+  "nameplate_06.jpg": {
+   "fields": {
+    "equipment_id": "370776185961",
+    "serial_number": null,
+    "model": "370776185961",
+    "voltage": "208-230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "370776185961",
+      "conf": 0.681668757492591,
+      "anchored": true,
+      "rule": "SPEC"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "208-230/460",
+      "conf": 0.8194629879907589,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "DALDOR'RELIANOED",
+    "SwaEMotor",
+    "BALDOR E ECiRICCO Eis thar TfGrusa",
+    "CaT: Nol 094914",
+    "SPEC; 370776185961",
+    "HP 7,5 ipss",
+    "VOLTS 208-230/460",
+    "AMPS 21-18.8/94",
+    "RpM: 1770",
+    "FRAME D132S A6o Pa Rors",
+    "SER F 1.15 kooa] 0B5 kcuss]",
+    "NOWA Nov Di 917 lee 81",
+    "RATNG 4OC AmB-Cont",
+    "CC Su Nzok2t",
+    "6310 6036206",
+    "BeNaNosIde tefc ISN_ Fo9_1183105",
+    "OCL",
+    "Cr10.1",
+    "cLec LUCAl Enginctung Mpicon"
+   ]
+  },
+  "nameplate_07.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "LAFeRT Medo hlldy ce",
+    "TA Dve 80545 JEcE Tial 478.5944",
+    "IcLF IPss S1 T6F0 Leonb 40C",
+    "ea6 . 11572381  05544 0, 75HP 78J6a",
+    "K8pn cos1 032 Cb-16 4F /a68v",
+    "622"
+   ]
+  },
+  "nameplate_08.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "301I5970012EE514",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "301I5970012EE514",
+      "conf": 0.5767134630322888,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "##L @LFJP 65",
+    "W2e4C112m6 Duty SI",
+    "3 Motol Dmba 50",
+    "3GBA Tioooiche Cos_ Ei",
+    "Sr No: 301i5970012EE514 KW hp 072 6240",
+    "V Hz Ilmin 72 3 520",
+    "30773 75",
+    "7150512",
+    "0470 kg",
+    "620522C IS 325 5",
+    "62062703 IEC 60034-1 Ref"
+   ]
+  },
+  "nameplate_09.jpg": {
+   "fields": {
+    "equipment_id": "700LLBETBELAJT W22",
+    "serial_number": null,
+    "model": "700LLBETBELAJT W22",
+    "voltage": "380",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "700LLBETBELAJT W22",
+      "conf": 0.2795687154862113,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "380",
+      "conf": 0.2096086189619277,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "24S CC0294 Brgl To 0 Sovoro Iovortor Outy Duly Molor 1 1723868,",
+    "EM1 VODEL 700LLBETBELAJT W22",
+    "PH 3 IFR 143751 154BR20201053523260",
+    "N230746014 2 94Z1 47LRPN,8765 HPkW) LO( 75 Hz60 SE L25 PF_0.75",
+    "Fci Fon 5ft 85.5_4DES BIDON_COQLIS CL E ZI 80 IP55",
+    "ENcP \"TTGISrA  6771 84uS4841 6208V 3.07 AMB 40C",
+    "LOHP 0.Z5kW SoHz_380V AE SF475 SFA 3.53",
+    "LJATA50RPM SEL25_EEF_82,57 (IES)ICODE M",
+    "14 15 9 T6 014 0 TS T6 6205-22",
+    "1 o17 818 919 1 817 818 819 0 6204-22",
+    "8t1 812 813 Pti 812 813 MOBIL POLYREX EM",
+    "Li L2 L3 Y Li 12 L3",
+    "For 60hz: Class 1 Div2, G5.78, C and d 06 IALT Joop m.as, A4Lbs}",
+    "Class 4 Zono 2Ic 5 13 s JP19",
+    "Closs Il, Div 2. Gra F ond 0 15 IUS JUs @",
+    "For Uso Wonns On Pwm; Gra Ceolo B; C D F and Oo for SafrsaPr"
+   ]
+  },
+  "nameplate_10.jpg": {
+   "fields": {
+    "equipment_id": "FHSTB DVII2MGZBMG",
+    "serial_number": "96.01012530.01.0001.05.06",
+    "model": "FHSTB DVII2MGZBMG",
+    "voltage": "380",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "96.01012530.01.0001.05.06",
+      "conf": 0.8965613706252431,
+      "anchored": true,
+      "rule": "NR"
+     }
+    ],
+    "model": [
+     {
+      "value": "FHSTB DVII2MGZBMG",
+      "conf": 0.7652999502021126,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "220",
+      "conf": 0.7648982059874101,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "220/240",
+      "conf": 0.7648982059874101,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "240",
+      "conf": 0.7715045346317929,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "380",
+      "conf": 0.9007629803780919,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "380-460",
+      "conf": 0.9007629803780919,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "ALFREG IMHOFAG",
+    "Ch-4142MONCHENSTEIN",
+    "Typ FHSTB DVII2MGZBMG 3~IEC 34",
+    "Nr 96.01012530.01,0001,05.06 IM M1",
+    "kW 4.00 coS $ 0.84",
+    "50Hz V 220 240 4/ 380 415YA 15.20/8.70",
+    "60 Hz V 240 266 AI 415-460 TA 13.80/7.90",
+    "Tlmin 1420789 bei -50 Hz IP 55 Ki; F",
+    "Bremse V 380- 460 AC Nm 55 Gleichrichter BGEI 5",
+    "kg Ma Nm 15.88:1",
+    "Schmierstolt CLP-Cc 220 Made In Switzerland \u20ac \u20ac"
+   ]
+  }
+ },
+ "tess_psm4/tuned": {
+  "nameplate_01.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": []
+  },
+  "nameplate_011.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "Oe rar et'",
+    "7",
+    "ww ee ee ee ee -\u2014\u2014"
+   ]
+  },
+  "nameplate_012.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    ":",
+    "EE NOUCKIONGHOTORECOM 1D DUGKIONSMO",
+    ";",
+    "qe ee",
+    "=",
+    "ERT",
+    "ESET \u2014",
+    "|",
+    "-_-\u20147-_oOoOoOC",
+    "~"
+   ]
+  },
+  "nameplate_013.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "at \u2014",
+    "[8 GERALD corm - pre VaAnecrem ON",
+    "t INDLISTRIAL MOTOR",
+    "ete :",
+    "TRB:"
+   ]
+  },
+  "nameplate_014.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "EGIJIGI90001717202",
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "EGIJIGI90001717202",
+      "conf": 0.23399999999999999,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "BATOOMLC2 \u2014_IMBS/IMI001",
+    "aor",
+    "\u2014Toarolmtg. 2019 No. eGiJigi90001717202 _",
+    "[P55 |",
+    "\u2018ee",
+    "Si",
+    "AT 2000",
+    "r waren f",
+    "Lr",
+    "\u2014",
+    "| : : \u201c",
+    "\\ Prod: code 15343: 16143C-A0D. ct",
+    "~~,\" raeeemes <5 6209-2716",
+    "_- *",
+    "2 At, VEC 690847 IS 126153088 2 FT"
+   ]
+  },
+  "nameplate_015.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "Bena\u201d gem _ SINGLEPHASE xa",
+    "- INDUCTION HOTOR",
+    "via: ALS) [2 E ap E",
+    "elBo] Est \u2014]Ne Si",
+    "eile een"
+   ]
+  },
+  "nameplate_016.jpg": {
+   "fields": {
+    "equipment_id": "5KS184BCT205B",
+    "serial_number": null,
+    "model": "5KS184BCT205B",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "5KS184BCT205B",
+      "conf": 0.4218181818181818,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "(CS) Or MODEL 5KS184BCT205B HP. -5 PHASES *NO: E829: . a",
+    "MAX. KVAR.: 4:1 LS.Fo. 1.15222 SRIAEING. \u2018CONT. \u00a9",
+    ". VOLTS. - 230/460: \u201cRPM: 1750S \u201c60\u00b0.",
+    "@) AMP. \u201812. 3 / 6.15: POWER FACTOR\\: OBIS) ERTZ- een 88: 5.",
+    "VF, FRAME. cass\u201d. F MAX: - \"ANB. 40\u00b0C a eayoR NECTION \u201cey . . \u201cif",
+    "+ 184T- estan: AC Nore. 3 3a,",
+    "a ear TE sans K CODE J PG. HOS 1",
+    "sae (S087 = SPR Sl yi $y os \u201ceee a",
+    "a oy",
+    "\u00b0 y REN as bait ye",
+    "Vines WAKA ue"
+   ]
+  },
+  "nameplate_017.jpg": {
+   "fields": {
+    "equipment_id": "TROA",
+    "serial_number": null,
+    "model": "TROA",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "TROA",
+      "conf": 0.33428571428571424,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "4 vw",
+    "EFFICIENCY = Ld",
+    "PREMIUM v.",
+    "3.PHASE SEVERE DUTY MOTOR",
+    "TYPE TroA pe Nye - FRAME 4500C3",
+    "POLES in OUTPUT ih KP kW",
+    "VOLTS pxmoee Hz. wr RATING Cot.",
+    "|",
+    "AMPS: my OS. FE. Wh: INS. Be",
+    "NOM. EFFI xe MIN. EFF. 2",
+    "RPM 9: DESIGN 35 AMB.. aie 4",
+    "DATE anvzi [BEARINGS (MRTeiteat eee og",
+    "IP",
+    "WEIGHT \u2018hile: AGS, (3",
+    "PE TE ae \u00a9Owestinghouse OND ad Py",
+    "TEC.",
+    "mOotToR \u201cCOMPANY.\u201d",
+    ". ROUND ROCK, TEXAS"
+   ]
+  },
+  "nameplate_018.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    ". , A ae cays ioe. as . oi Se Ly te AE Pines \u201c9 WAS aes thet",
+    "Lf - \u2018 i \\ Tagle : EA.. oe se eontee iy: : whe 22 ware e Oe > tate SOeear Aaes?.",
+    "_ .. se wg: seas ~y ey yy , fre. a aeeee a2 oe ~~ \u00a2 -",
+    "eee ey o =\" wey es ts aor oes LTS v, > Sle vee, ae .",
+    "\u201c~s - ' : ron a * . oF See oP aiT as Pe No"
+   ]
+  },
+  "nameplate_019.jpg": {
+   "fields": {
+    "equipment_id": "SHDC",
+    "serial_number": "FM.14015624040001",
+    "model": "FM140156",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "FM.14015624040001",
+      "conf": 0.3,
+      "anchored": true,
+      "rule": "SER NO"
+     },
+     {
+      "value": "FM.14015624040001",
+      "conf": 0.3,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "FM140156",
+      "conf": 0.8099999999999999,
+      "anchored": true,
+      "rule": "MODEL"
+     },
+     {
+      "value": "SHDC",
+      "conf": 0.28500000000000003,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "115/230",
+      "conf": 0.5775,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "~~.",
+    "_ ya \u2014- iy wee 71, Seeks SINGLE PHASE 2i7207",
+    "MODEL: FM 140156 1SO9001 CE.",
+    "|",
+    "Ser.No.:FM.14015624040001",
+    "TYPE:SHDC: HP: HZ: 60",
+    "VOLT=115/230V. /PH-1 RPM: 1725",
+    "ENC-TEFC FLA-13.6/6.8A FR-56",
+    "INS-F-SF+145 = DES-AMB-40",
+    "GODE-L\u2019 DUTY- CONT. ROT-CW-CCW",
+    "115V\" 230V",
+    "LueRiaro TS-\u2014\u2014-LINE?. \u2014TS- LINE1",
+    "\u201cT41 T1 \" LINE2.",
+    "PRELUBRICATED \u201cT3\u2014f twee re]",
+    "NO:FURTHER\u2019 72 13's",
+    "LUBRICATION = - 74 INS La",
+    "NECESSARY me t7\u2014] U4 INS",
+    ".Ta INS",
+    "CHANGED FROM ccw to Cv\" is THE EXCHANGE OF 6 AND 8",
+    "| MADCT tN CHINA",
+    "ee,"
+   ]
+  },
+  "nameplate_02.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "bsrenne ail",
+    "ey 0D",
+    "dia tea",
+    "sae A",
+    ": ; \u00b0 at - ce dren : ot ts f fae",
+    "| | ' ay ji \u00a2 \u2018ef ie . \\! y coe ce ten aro TROL y",
+    "ae =! me . fee 1 Ni",
+    "| ae ERLOAD:",
+    ", . : aw ~ . . ee a ee"
+   ]
+  },
+  "nameplate_020.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    ". Fame",
+    "Le eee"
+   ]
+  },
+  "nameplate_03.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "_ a ih)",
+    "i",
+    "\u2018 PUBIC",
+    "cE att \u2018 oS LEEROUSI AG",
+    "\u2014\u2014\u2014\u2014\u2014\u2014 =. ; ao = rh { 7 ee i",
+    ". o 7 Qe. ay ~= al ;",
+    "WE \"s Gh. ais oe",
+    "Le a3 Al.",
+    "Met mite a One Sel Bee ESS, ?-",
+    ";",
+    "Root 0 Osis he Ree",
+    "7 . AR s",
+    ". - 4. DOO: ane fi te i fh 7 4!",
+    "ee ee =",
+    "wa . 9",
+    "aaa",
+    ". ene) ws: ; aainl paca eee \u201cat ee ee fo ae OTT .\"",
+    "\u2014_ 7 re oy .",
+    "\u201c a -. , ca Pa a ba a \u00ab 7 -_\u2122. _ a * \u201c AB",
+    "* TAAL ALS La area \u201cyoann _. aot ey ain coe ies Ns",
+    "Vetere at i ee a . i CP ba ge te. Sess et 2 -e-"
+   ]
+  },
+  "nameplate_04.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "2W057K40-006",
+    "model": null,
+    "voltage": "380",
+    "manufacture_date": "2013"
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "2W057K40-006",
+      "conf": 0.5925,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [
+     {
+      "value": "380",
+      "conf": 0.5758333333333333,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": [
+     {
+      "value": "2013",
+      "conf": 0.5925,
+      "anchored": true,
+      "rule": "DATE/YEAR-anchor"
+     }
+    ]
+   },
+   "lines": [
+    "\u00a9 Crown Triton @e \u00a9 C\u00e9",
+    "EY \u20ac",
+    "Premuum Efficiency AC 3 Phase Licter Srary Vora",
+    "150HP. OP 460V__ | ___HHI150-12-4477",
+    "Node! \u2018Encl. TEFC {Amps ___169.5A",
+    "LSTA 7SRO608 [ost CONT [Code \u2014G It Hertz 60Hz",
+    "| Frame 4477.",
+    "NUSTE [SF 115 | RPM 1185",
+    "7 . Beating} \u2014eaisea Drive ooo SS Amb, __40T",
+    ". re Re Hs 3HEff. 96.0%",
+    "- _ Usable at TS50Hz 150HP:380V 208.5A 985rp om. S.F.21.0 Eff.:94.3% Code:F",
+    "' Bt PLATSROGOR Temp. Foora | 14-330 | KOR",
+    "CSA CLASS 1, Dreision 2, Groups. Rae ord 0 Code drm ese | TX (169T) | DA (1T) -",
+    "Cort \u2018x fad CUSS 1, Zore__ 2, Croups JA.09 \u201cond IC\" Ama eSc | DA (180) 10 (200\u00b0C)",
+    ". No. 2W057K40-006- Dote 2013. 03 Yeiaht 1970Ib",
+    "a secta Korea HI AHYUNDA Al yet",
+    "2M =3052972 WAN PIAS LS",
+    "--"
+   ]
+  },
+  "nameplate_05.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "3G3C2120397154",
+    "model": null,
+    "voltage": "400",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "3G3C2120397154",
+      "conf": 0.62125,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [
+     {
+      "value": "690",
+      "conf": 0.36333333333333334,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "400",
+      "conf": 0.8085714285714285,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "380",
+      "conf": 0.375,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "a - \"Le ~%e_* oe ee ee? A ie ee . - ~",
+    ", DA UD a iiedols (\" RS)",
+    "UD 7",
+    "EREATH OUD 95-070 aseksanctr\u00e9w toczkt Poted 163 was,",
+    "\u20183~ Motor M3AAS0MC2 1IMB834/IM2101 20u",
+    "No. 3G3C2120397154 oe \u201cIns. Cl F IP SS",
+    "V Ha kW r/min A Cos Duty",
+    "690Y 50 0=\u2014 sd, Ss 2883.\u2014\u2014s\u00abd1,33 0.81 | S1",
+    "400D 50 11 2883 2,300 0,81 Si.",
+    "6GOY 50 4,1 2868 1,360: 0,84 Si",
+    "380D \u201850 2,2 .2868 =. 2,300 0,84. S1",
+    "4150 50 \u20184,1 2895 = 2,300 0,78 | S1",
+    "\u2018A60D\u00b0 60 \u20181,1 3500 82,000 0,78 - _ $1",
+    "SOHz IE3 - 82.7% (100%) - 82.9% (75%) -82.1%.(S0%)",
+    "GOHz 1E3 -84.0%(100%) - 83.0% (75%) - 80.2% (50% |",
+    "CCO31A NEMA NOM. EFF. 83,0%",
+    "Prod. Code\u2019 3GAA081330-ADK, 008,436",
+    "-6204-22/C3- au 6203:22/C3 10k",
+    "{ ay -- re) e",
+    "\\",
+    "Sv. 1\u00a3C60034-1 Need"
+   ]
+  },
+  "nameplate_06.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "|",
+    ": (pees SE",
+    "(GE UES] |",
+    "26 ee eae"
+   ]
+  },
+  "nameplate_07.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "ie",
+    "mene wt bie we",
+    "fae. eee ne RN kee 2p we. - - \u2014 wat, .-",
+    "re - oe eee \u2018\u2014_\u2014- .",
+    "\u2014\u2014",
+    "Lt Tighe OUR Velen ta, wrens Une ts near A bret he OPM",
+    "we +s oar. =, fh",
+    "09 pene",
+    "ea =",
+    "eee"
+   ]
+  },
+  "nameplate_08.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "hoo",
+    "mittee",
+    "TZBAFGUIZME -_*",
+    "tet 2\u201d ove",
+    "DUAN\u201d \u00abkQ. aK",
+    "TERNS US \u2018",
+    "ee S82 |",
+    "60034 A Rete",
+    "= [vec o . 4",
+    "ra \u2018",
+    "- or \u20ac 22",
+    "~~-\\er 7"
+   ]
+  },
+  "nameplate_09.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "ae ee a eed moo Ww tees Recmnioit Eye EAR SCA A VerlePt Do hFtPn REN if",
+    "aa : Severe Dv ori ler",
+    "aS Ne THY",
+    "Lae a ak a",
+    "I anor SIR ~ SEE",
+    "ZO Se he",
+    "208",
+    "iBiEeO 5 aAWSFas] Sasi Teh esa est a",
+    "inca fata ame",
+    "TETAS",
+    "EST Tce DET]",
+    "ple iB? Ba B",
+    "J ue",
+    "ar LS \u201c : o : fe \u00b0",
+    "~",
+    "\u2018 \u201c.eS ~,",
+    "te CED",
+    "~~ oa ae",
+    "Crm SF ean ="
+   ]
+  },
+  "nameplate_10.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    ": ~>",
+    "AGE, ot te eee",
+    "\u2018",
+    "= _",
+    "MONCHEME Teint oo ;",
+    "ae",
+    "8) 42 428 aa Monod",
+    "e",
+    "\u2018",
+    "mrs anment eae\u201d. y corey iin TLr EA eee rs \u00abe \u2014\u2014\u2014 \u2014 \u2014_\u2014\u2014o no yp ots wane a, . \u00b0",
+    "_ . snake ASR EE eth \u2018\u00a5. ape figs Mens hes \u201cets wR > PEEaeEe ae Fane om \u201cny aoe noe x .",
+    "t rd oo ae -",
+    "r- wee Oe ee",
+    "prov Be Pas ee Dar esre - ST MNS COR ee NNN adie a SEALE NY On Oe eedin mr ae"
+   ]
+  }
+ },
+ "paddle/tuned": {
+  "nameplate_01.jpg": {
+   "fields": {
+    "equipment_id": "MY 7124",
+    "serial_number": "1202190103",
+    "model": "MY 7124",
+    "voltage": "230",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "1202190103",
+      "conf": 0.9452676773071289,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "MY 7124",
+      "conf": 0.9427188634872437,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230",
+      "conf": 0.9811302224795023,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "SINGLE PHASE E",
+    "INDUCTION MOTOR",
+    "TYPE MY 7124 IP. 54",
+    "0.5 HP 0.37 kW INS.CL",
+    "230 V 2.82 A 20 450",
+    "50Hz 51",
+    "1400r/imin No. 1202190103"
+   ]
+  },
+  "nameplate_011.jpg": {
+   "fields": {
+    "equipment_id": "365T",
+    "serial_number": null,
+    "model": "A36-8063-4076",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "365T",
+      "conf": 0.8785070379575094,
+      "anchored": true,
+      "rule": "CAT NO"
+     }
+    ],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "A36-8063-4076",
+      "conf": 0.8876217752695084,
+      "anchored": true,
+      "rule": "SPEC"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9051259756088257,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "BALDOR\u00b7RELIANCEB",
+    "SUpE SEVERE DUTY XEX",
+    "CAT 365T EQUIPPED WITH 120",
+    "OA SPEC A36-8063-4076 PHASE 3 DESIGN B TYPE",
+    "10 HP75VOLTS 230/460 171/85.6 HZ6-60 AMB 40 C SF 1.00",
+    "RPM 1785 AMPS DUTYCONTF",
+    "DEIE END DEN 65BC03J30X ENCL TEFC CODE",
+    "OPPD E 65BC03J30X NEA NOY   95.",
+    "VARIABLETORQUEA2408022002",
+    "VPWM INVERTERIP55",
+    "USSUITIROR 1. 15 SF ON SINEWAVE POWER MOTOR  SLS.",
+    "OVER TEMP PROT 3 NP2444L",
+    "BALDOR ELECTRIC CO. FT. SMITH, AR. MFO. IN U.S.A."
+   ]
+  },
+  "nameplate_012.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "20190906385",
+    "model": "GSA632-4",
+    "voltage": "220/380",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "20190906385",
+      "conf": 0.9648053646087646,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "GSA632-4",
+      "conf": 0.9746932089328766,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "220/380",
+      "conf": 0.8970875144004822,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "THREE PHASE",
+    "INDUCTION MOTOR CE",
+    "TIPE GSA632-4 0.18 KW/ 0.25HP",
+    "CONN\u25b3/Y 50 Hz 220/380 V",
+    "COSp 0.73 1310 R/MIN/ 0.62 A",
+    "IP 55 INS. CL F NO.20190906385",
+    "ISO 9001 IEC 60034-1"
+   ]
+  },
+  "nameplate_013.jpg": {
+   "fields": {
+    "equipment_id": "M3538",
+    "serial_number": "W1012031368",
+    "model": "34A61-872",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "M3538",
+      "conf": 0.9581763446331024,
+      "anchored": true,
+      "rule": "CAT NO"
+     },
+     {
+      "value": "M3538",
+      "conf": 0.9581763446331024,
+      "anchored": true,
+      "rule": "NO-short"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "W1012031368",
+      "conf": 0.9996182173490524,
+      "anchored": true,
+      "rule": "SN"
+     }
+    ],
+    "model": [
+     {
+      "value": "34A61-872",
+      "conf": 0.9999440610408783,
+      "anchored": true,
+      "rule": "SPEC"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9999862015247345,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "208",
+      "conf": 0.7842170655727386,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "AIDOR\u00b7RELIAN",
+    "INDUSTRIAL MOTOR",
+    "CAT. NO. M3538",
+    "SPEC 34A61-872",
+    "HP 1/2",
+    "VOLTS 230/460",
+    "AMPS 2/1",
+    "R.P.M. 1725",
+    "FRAME 56 HZ 60 PH 3",
+    "SER. F. 1.25 CODE L DES B CLASS B",
+    "NEMA NOM. EFF. 74 % P.F. 63 %",
+    "RATING 40C.AMB-CONT",
+    "CC USABLEAT 208V 2.5 A \u51a0",
+    "BEARINGSDE6203 ODE|6203",
+    "ENCL. TEFC SN W1012031368",
+    ".SFA2.4/1.2",
+    "BALDOR ELECTRIC CO SMITH, AR. MFG.IN U.S.",
+    "NP1256L"
+   ]
+  },
+  "nameplate_014.jpg": {
+   "fields": {
+    "equipment_id": "H6343 161430-ADD",
+    "serial_number": "3G1J19190001717202",
+    "model": null,
+    "voltage": "400",
+    "manufacture_date": "2019"
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "H6343 161430-ADD",
+      "conf": 0.9688848257064819,
+      "anchored": true,
+      "rule": "PROD CODE"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "3G1J19190001717202",
+      "conf": 0.9957267045974731,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [],
+    "voltage": [
+     {
+      "value": "400",
+      "conf": 0.9609220623970032,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     }
+    ],
+    "manufacture_date": [
+     {
+      "value": "2019",
+      "conf": 0.9957267045974731,
+      "anchored": true,
+      "rule": "DATE/YEAR-anchor"
+     }
+    ]
+   },
+   "lines": [
+    "IS:12615",
+    "5",
+    "CE IE3 CM/L-9512389024",
+    "M2BAX160MLC2 IMB3/IM1001",
+    "3 ~ Motor",
+    "Year of Mfg. 2019 No.3G1J19190001717202",
+    "Amb 50\u00b0C Ins. cl. F IP55",
+    "V Hz r/min kW hp A cos \u03c6 Eff. Duty",
+    "400D 2950 18.5-25 34.20 0.90 92.40 S1",
+    "+1-10% +1-5%",
+    "Prod. code H6343 161430-ADD",
+    "Nmax r/min",
+    "6209-2Z/C3 6209-2Z/C3 0144kg",
+    "IEC 60034-1 IS 126152"
+   ]
+  },
+  "nameplate_015.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "HS1407019",
+    "model": "ML56C-2-22",
+    "voltage": null,
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "HS1407019",
+      "conf": 0.9992011785507202,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "ML56C-2-22",
+      "conf": 0.9879421492417654,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [],
+    "manufacture_date": []
+   },
+   "lines": [
+    "REM SINGLE PHASE CE",
+    "INDUCTION MOTOR",
+    "TYPE ML56C-2-22 INS CL F IP 55",
+    "KW 2.2 r/min 2850",
+    "HP 3 50 uF 450 V",
+    "240 12.9 250 uF 300 V",
+    "Hz50 S1 No HS1407019"
+   ]
+  },
+  "nameplate_016.jpg": {
+   "fields": {
+    "equipment_id": "E829",
+    "serial_number": null,
+    "model": "5KS184BCT205B",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "E829",
+      "conf": 0.9999612058912005,
+      "anchored": true,
+      "rule": "NO-short"
+     }
+    ],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "5KS184BCT205B",
+      "conf": 0.9999612058912005,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9999668697516123,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "208",
+      "conf": 0.9629312455654144,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "MODEL 5KS184BCT205B HP 5 PHASE NO E829",
+    "MAX. KVAR 1.1 S.F. 1.15 RATING CONT.",
+    "VOLTS 230/460 RPM 1750 RTZ 60",
+    "AMP 12.3 6.15 POWER FACTOR 5 NEMA 88.5",
+    "CLASS INS F MAX. AMB. 40\u2103",
+    "3 2 FRAME 184T NEMA DESIGN A 4 O 5 6",
+    "ENCL TE TYPE K CODE J 05060",
+    "4 7 SHAFT BRG END 6306ZZ C 9 O 80 9",
+    "R BRG ND 2 \u4ea7 3",
+    "6306ZZ",
+    "SER.NO. 6",
+    "USABLE ON 208V NETWORKS E INE",
+    "ALT RATING:SF AT 13 6",
+    "e8 MAX.AMB C WEI",
+    "GE lb",
+    "Motors"
+   ]
+  },
+  "nameplate_017.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "D077015-1",
+    "model": "AEJH-S2",
+    "voltage": null,
+    "manufacture_date": "2007"
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "D077015-1",
+      "conf": 0.9163775086402893,
+      "anchored": true,
+      "rule": "SER NO"
+     },
+     {
+      "value": "D077015-1",
+      "conf": 0.9163775086402893,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "AEJH-S2",
+      "conf": 0.9796353876590729,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [],
+    "manufacture_date": [
+     {
+      "value": "2007",
+      "conf": 0.9632993042469025,
+      "anchored": true,
+      "rule": "DATE/YEAR-anchor"
+     }
+    ]
+   },
+   "lines": [
+    "PREMIUM EFFICIENCY",
+    "3-PHASE SEVERE DUTY MOTOR",
+    "TYPE AEJH-S2 FRAME 500CB",
+    "POLES 8 OUTPUT 1000 HP kW",
+    "VOLTS 2800/4180 Hz GO RATING CONT.",
+    "AMPS 229/187 S.F. 1.15 INS. 6 A0",
+    "NOM. EFF.96.0% MIN. EFF.",
+    "RPM 690 DESIGN B AMB. 40 C",
+    "DATE 2007 BEARINGS RENIC 88-106/15-100",
+    "IP 64 SER.NO. D077015-1 MAE N AIAN",
+    "WEIGHT 12100 KGS",
+    "TECWestinghouse",
+    "MOTOR COMPANY",
+    "ROUND ROCK. TEXAS"
+   ]
+  },
+  "nameplate_018.jpg": {
+   "fields": {
+    "equipment_id": "1LG4 206-2AA60-Z",
+    "serial_number": null,
+    "model": "1LG4 206-2AA60-Z",
+    "voltage": "400/690",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "1LG4 206-2AA60-Z",
+      "conf": 0.9757285118103027,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "690",
+      "conf": 0.9997186362743378,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "400/690",
+      "conf": 0.9779047419627507,
+      "anchored": true,
+      "rule": "VOLT-conn-pair"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "SIEMENS B3C ExMAIBCE",
+    "D-91056 ERLANGEN UC 07G3/017886701 MB3 Th.Cl.155(F)",
+    "3~MOT. 1LG4 206-2AA60-Z 200L Certif.No. IP",
+    "Hz ExnA11 T3 A kW cosp 1/min MN TES FTZ0 05  55",
+    "400\u25b3|50 5228,80,882950 ATEX 0007",
+    "690Y 30",
+    "IEC/EN 60079-15 Gew./Wt.205kg",
+    "IEC/EN 60034",
+    "-20C<Ta<+45C"
+   ]
+  },
+  "nameplate_019.jpg": {
+   "fields": {
+    "equipment_id": "SHDC",
+    "serial_number": "FM14015624040001",
+    "model": "FM140156",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "FM14015624040001",
+      "conf": 0.9929105639457703,
+      "anchored": true,
+      "rule": "SER NO"
+     }
+    ],
+    "model": [
+     {
+      "value": "FM140156",
+      "conf": 0.9776958624521891,
+      "anchored": true,
+      "rule": "MODEL"
+     },
+     {
+      "value": "SHDC",
+      "conf": 0.9989439447720846,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "115/230",
+      "conf": 0.9815504352251688,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "SINGLE PHASE 257207",
+    "SP",
+    "INDUCTION MOTOR C US",
+    "MODEL:FM 140156 ISO9001 CE",
+    "Ser No.:FM 14015624040001",
+    "TYPE: SHDC HP:1 HZ:60",
+    "VOLT-115/230V PH-1 RPM- 1725",
+    "ENC-TEFC FLA-13.6/6.8A FR-56",
+    "INS-F SF-1.15 DES-AMB-40\u2103",
+    "CODE-L DUTY-CONT ROT-CW-CCW",
+    "LUBRICATION 115V 230V",
+    "BEARINGS T5 LINE1 T5 LINE1",
+    "PRELUBRICATED FTTE LINE2 T1 LINE2",
+    "NO FURTHER LUBRICATION 124175 INS",
+    "NECESSARY T7 INS 1273 76 479 INS",
+    "T9 INS",
+    "CHANGED FROM CCW TO CW IS THE EXCHANGE OF 6 AND 8",
+    "MADE IN CHINA"
+   ]
+  },
+  "nameplate_02.jpg": {
+   "fields": {
+    "equipment_id": "DI0034PCI",
+    "serial_number": null,
+    "model": "DI0034PCI",
+    "voltage": "230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "DI0034PCI",
+      "conf": 0.9884574711322784,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9999716728925705,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "MODEL NO. DI0034PCI",
+    "VOLTS 230/460 AMP 7.8/3.9",
+    "HP 3 ENCL. TEFC (IP65) FRAME NO. 182TC",
+    "F/L RPM 1760 MAX. AMB. 40 \u2103 SERVICE FACTOR 1.15",
+    "INS H TIME RATING CONT. BRG D.E 6306 VV",
+    "3-PHASE KVA CODE K NO. O.D.E 6206 VV",
+    "Hz 60 EFFICIENCY 89.5% NEMA DESIGN B",
+    "HERMALLY PROTECTED LOW VOLTS HIGH VOLTS P1o P2",
+    "50 6 THERMAL PROTECTION",
+    "8 9 86 9 COMMECT TO INTERLOCK",
+    "ee S  2IIHY ZI IHAT CONTACT WILL",
+    "CO048A THE CONTROLLER GTFHHE OMERLOAD",
+    "BLECTOIC COM"
+   ]
+  },
+  "nameplate_020.jpg": {
+   "fields": {
+    "equipment_id": "0.75KNE4FLG",
+    "serial_number": null,
+    "model": null,
+    "voltage": "415",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "0.75KNE4FLG",
+      "conf": 0.9971869885921478,
+      "anchored": true,
+      "rule": "MACHINE NO"
+     }
+    ],
+    "serial_number": [],
+    "model": [],
+    "voltage": [
+     {
+      "value": "415",
+      "conf": 0.9590955773989359,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "CG Power and Industrial Solutions Ltd",
+    "CE 3 PHASE INDUCTION MOTOR IS 12615",
+    "S",
+    "MACHINENO: 0.75KNE4FLG FRAME:ND 80 CM/L-7800028417",
+    "IP55 kW(HP):0.75(1.00) RPM:1410",
+    "IC411 EFF(IE2):79.60% DUTY:S1",
+    "VOLT: 415\u00b110% AMP:1.82Y PF:0.72",
+    "BRG.DE/NDE 6204ZZ/6204ZZ Hz:50\u00b15% \u5b9e",
+    "557 W",
+    "REF:XEGM27571 WT: 17.16 KG AMB: 50C",
+    "IS/IEC-60034 TH.CL: F/B CONN DIAG: 201 EAT0665R1"
+   ]
+  },
+  "nameplate_03.jpg": {
+   "fields": {
+    "equipment_id": "00536ET3E184JM-W22",
+    "serial_number": "1048518705",
+    "model": "00536ET3E184JM-W22",
+    "voltage": "230/460",
+    "manufacture_date": "17ABR2019"
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "1048518705",
+      "conf": 0.9804982542991638,
+      "anchored": true,
+      "rule": "NO:date-line"
+     }
+    ],
+    "model": [
+     {
+      "value": "00536ET3E184JM-W22",
+      "conf": 0.9804982542991638,
+      "anchored": true,
+      "rule": "MODEL"
+     },
+     {
+      "value": "TE1BFOXON",
+      "conf": 0.9465271830558777,
+      "anchored": true,
+      "rule": "MOD."
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.98056640625,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "380",
+      "conf": 0.9703051348527273,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     },
+     {
+      "value": "230",
+      "conf": 0.8521689507696364,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": [
+     {
+      "value": "17ABR2019",
+      "conf": 0.9804982542991638,
+      "anchored": true,
+      "rule": "DDMMMYY"
+     }
+    ]
+   },
+   "lines": [
+    "T CC029A Premium Inverte: Severe Duty Duty Motor 2034382",
+    "MADE IN M\u00c9XICO MODEL-00536ET3E184JM-W22 17ABR2019 1048518705",
+    "PH3 FR 82 4JM HP(kW) 5.0 3.7 \u95f4 Hz 60 SF 1.25 PF 0.89",
+    "V230 460 A 11.8/5.90 RPM 3485 INS. CL.F \u25b3T\u00b780 IP55",
+    "NEMA NOM EFF 88.5 % DES B DUTY CONT. AMB 40\u2103",
+    "ENCL TEFC SF /7.38 USABLE @208V.13.1 A SF 1.15 SFA 15.1",
+    "5.0HP-3.7k 50Hz 380V 7.14A 2850RPM\u00b7SF1.25 EFF 86.5% (IE2) CODE",
+    "(OT5 T6 O0 O T4 T5 T6 \u610f 6397-ZZ",
+    "-230V T7 0T8 QT9 8 OT7: OT8 619 6206-77",
+    "20 6 T1 OT2 6T3 460 OTL OT2 013 MOBIL POLYREX",
+    "#\u25b3 L1 L2 L3 1\u25b3 L2 L3",
+    "ALT 1000 O.S",
+    "For 60Hz: Class I. Div 2, Gr. A, B. C and D - T3.",
+    "Class I, Zon 2, IIC - T3 C S",
+    "Class II., Div 2. On- F and G T5 2",
+    "For use. on PWM, Gr. A. B. C, D. F and FOR SAFE AREA",
+    "VT1000:1, CT20:1, 1.0SE TAA MOD.TE1BFOXON",
+    "2",
+    "4"
+   ]
+  },
+  "nameplate_04.jpg": {
+   "fields": {
+    "equipment_id": "HHI150-12-447T",
+    "serial_number": "2W057K40-006",
+    "model": "HLS447SR0608",
+    "voltage": "460",
+    "manufacture_date": "2013.03"
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "HHI150-12-447T",
+      "conf": 0.9801612695058187,
+      "anchored": true,
+      "rule": "CAT NO"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "2W057K40-006",
+      "conf": 0.9998731017112732,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "HLS447SR0608",
+      "conf": 0.9992672006289164,
+      "anchored": true,
+      "rule": "MODEL"
+     },
+     {
+      "value": "HLS",
+      "conf": 0.879264717300733,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "460",
+      "conf": 0.9801612695058187,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     },
+     {
+      "value": "380",
+      "conf": 0.9659217894077301,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": [
+     {
+      "value": "2013.03",
+      "conf": 0.9555625220139822,
+      "anchored": true,
+      "rule": "DATE/YEAR-anchor"
+     }
+    ]
+   },
+   "lines": [
+    "Crown Triton SP ee CE",
+    "Premium Efficiency AC 3 Phase Motor CC038A",
+    "150HP 6P 460V Cot. No. HHI150-12-447T",
+    "Model HLS447SR0608 Encl. TEFC Amps 169.5A",
+    "Frame 447T Duty CONT Code G Herlz 60Hz",
+    "Type HLS F NO-F1 K 95.8%",
+    "Drive NU318 S.F. 1.15 RPM 1185",
+    "Bearing Opp. 6316C3 Cheadps XSIA B Amb. 40\u2103",
+    "Usable 0:1 CT 20:1 VT 3/4Eff. 96.0%",
+    "at 50Hz 150HP 380V 208.5A 985rpm S.F.:1.0 Eff.:94.3% Code:F",
+    "CSA WPLP447SR0608 Tye PLP Temp. Ama4GC T3A (180\u2103) 360-440FR",
+    "Certifind CLASS 1. Division 2. Groups A,B.C and D Code And 550 (200\u2103)",
+    "for CLASS I, Zone 2. Groups A, 0B and 1C Dote 2013.03 Weight 1970lb",
+    "No. 2W057K40-006",
+    "4M-105292 Mode In Korea H1 \u25b3HYUNDAI RRSS C0 11D 5"
+   ]
+  },
+  "nameplate_05.jpg": {
+   "fields": {
+    "equipment_id": "3GAA081330-ADK",
+    "serial_number": "3G3C2120397154",
+    "model": "M3AA 80MC2",
+    "voltage": "690,400,660,380,415,460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "3GAA081330-ADK",
+      "conf": 0.9866835474967957,
+      "anchored": true,
+      "rule": "PROD CODE"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "3G3C2120397154",
+      "conf": 0.9566325346628824,
+      "anchored": true,
+      "rule": "NO:(id)"
+     }
+    ],
+    "model": [
+     {
+      "value": "M3AA 80MC2",
+      "conf": 0.9778977781534195,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "690",
+      "conf": 0.9859268750463214,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "400",
+      "conf": 0.9663712637765067,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "660",
+      "conf": 0.9964611189705985,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "380",
+      "conf": 0.9777006421770368,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "415",
+      "conf": 0.9906063420431954,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "460",
+      "conf": 0.9945085389273507,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     },
+     {
+      "value": "690,400,660,380,415,460",
+      "conf": 0.9852624634901682,
+      "anchored": true,
+      "rule": "voltage-column(>=3 rows)"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "ABB Sp. 2 0.0.",
+    "ul. Placydowska 27",
+    "95-070 Aleksandr\u00f3w t\u00f3dzki, Poland",
+    "IE3",
+    "3~ Motor M3AA 80MC2 IMB34/IM2101 2021",
+    "S",
+    "No.3G3C2120397154 Ins, CL. F IP 55",
+    "V Hz kW r/min A Cos \u03c6 Duty",
+    "690Y 50 1,1 2883 1,330 0,81 S1",
+    "400D 50 1,1 2883 2,300 0,81 S1",
+    "660Y 50 1,1 2868 1,360 0,84 S1",
+    "380D 50 1,1 2868 2,300 0,84 S1",
+    "415D 50 1,1 2895 2,300 0,78 S1",
+    "460D 60 1,1 3500 2,000 0,78 S1",
+    "50Hz 1E3-82.7%(100%)-82.9%(75%)-82.1%(50%)",
+    "60Hz IE3-84.0%(100%)-83.0%(75%)-80.2% (50%)",
+    "CC031A NEMA NOM. EFF. 84,0%",
+    "Prod. Code 3GAA081330-ADK, 008,436",
+    "6204-2Z/C3 D 6203-2Z/C3 10 kg",
+    "IEC60034-1"
+   ]
+  },
+  "nameplate_06.jpg": {
+   "fields": {
+    "equipment_id": "094914",
+    "serial_number": "F0911183105",
+    "model": "37J776T859G1",
+    "voltage": "208-230/460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [
+     {
+      "value": "094914",
+      "conf": 0.9986363649368286,
+      "anchored": true,
+      "rule": "CAT NO"
+     }
+    ],
+    "serial_number": [
+     {
+      "value": "F0911183105",
+      "conf": 0.8326572179794312,
+      "anchored": true,
+      "rule": "SN"
+     }
+    ],
+    "model": [
+     {
+      "value": "37J776T859G1",
+      "conf": 0.997471034526825,
+      "anchored": true,
+      "rule": "SPEC"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "208-230/460",
+      "conf": 0.9999452829360962,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "208",
+      "conf": 0.8607757687568665,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "BALDOR\u00b7RELIANOEB",
+    "TI Super-E Motor",
+    "BALDOR ELECTRIC CO FT.SMITHAR.MFGINU.SA",
+    "CAT. NO. 094914",
+    "SPEC. 37J776T859G1",
+    "HP 7.5 IP55",
+    "VOLTS 208-230/460",
+    "AMPS 21-18.8/9.4",
+    "R.P.M. 1770",
+    "FRAME D132S HZ|60 PH3 RoHS",
+    "SER. F. 1.15 CODE J DES CLASS",
+    "NEMA NOM. EFF. 91.7 P.F.81",
+    "RATING 40C AMB-CONT",
+    "CC USABLE AT 208V 21",
+    "ODE6206",
+    "BEARINGSDE6310",
+    "ENCL TEFC SNF0911183105 2",
+    "CT 10:1",
+    "ENGINEERING ELECTRICAL NP1207L"
+   ]
+  },
+  "nameplate_07.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": "DVE 80",
+    "voltage": "115/230",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [
+     {
+      "value": "DVE 80",
+      "conf": 0.830009788274765,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "115/230",
+      "conf": 0.9305616021156311,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "LAFERT Mado In Italy OCE",
+    "Tupe DVE 80 54 1EC60034 I'MMet N\u00b0B45944",
+    "Th.CI.F IP55 SI TEFC T.anb 40\u00b0C",
+    "68Hz 115/230V 0.55kW 0.75HP 7.8/3.6A",
+    "1668mn co5r 0.92 CB=16 \u03bcF/408V",
+    "8212"
+   ]
+  },
+  "nameplate_08.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": null,
+    "model": null,
+    "voltage": "415",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [],
+    "model": [],
+    "voltage": [
+     {
+      "value": "415",
+      "conf": 0.9859040975570679,
+      "anchored": true,
+      "rule": "VOLT-conn"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "ADD FAIDID CLF IP 55",
+    "M2BAFC112M6 Duty S1",
+    "3-Motor 3GBA113001-CHB Amb.50 Eff.",
+    "3G1J15370001248614 hp A Cos 82.40",
+    "Sr. No. Hz r/min kW 53 5.20 0.72",
+    "V 50+1-5% 945 22",
+    "415D+/-10%",
+    "0040",
+    "6205-2Z/C3",
+    "6206-2Z/C3 IEC 60034-1 Ref :- IS 325"
+   ]
+  },
+  "nameplate_09.jpg": {
+   "fields": {
+    "equipment_id": "00118ET3E143T-W22",
+    "serial_number": "1053523260",
+    "model": "00118ET3E143T-W22",
+    "voltage": "230/460",
+    "manufacture_date": "15ABR2020"
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "1053523260",
+      "conf": 0.9851133584976196,
+      "anchored": true,
+      "rule": "NO:date-line"
+     }
+    ],
+    "model": [
+     {
+      "value": "00118ET3E143T-W22",
+      "conf": 0.9387626051902771,
+      "anchored": true,
+      "rule": "MODEL"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "230/460",
+      "conf": 0.9821946620941162,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "230/460",
+      "conf": 0.9821946620941162,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "208",
+      "conf": 0.953926295042038,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     },
+     {
+      "value": "380",
+      "conf": 0.9989190995693207,
+      "anchored": true,
+      "rule": "VOLT-before-unit"
+     }
+    ],
+    "manufacture_date": [
+     {
+      "value": "15ABR2020",
+      "conf": 0.9851133584976196,
+      "anchored": true,
+      "rule": "DDMMMYY"
+     }
+    ]
+   },
+   "lines": [
+    "CC029A Premmom Sovare Duty Inverter Duty Motor 11723868",
+    "MADE IN MEXICO MODEL 00118ET3E143T-W22",
+    "PH 3|FR 143/5T. HP(kW) 1.0(0.75 15ABR2020 1053523260",
+    "V 230/460A 2.94/1.47 RPM 1760 Hz 60 SF1.25 PF 0.75",
+    "NEMA NOM EFF 85.5 % DES B DUTY CONT INS. .CL.F \u25b3T 80 K IP55",
+    "ENCL TEFC |SFA 3.67/1.84 USABLE \u00a9208V 3.07 A SF 1.15. SFA AMB 40\u2103",
+    "1.0HP 0.75kW 50Hz 380V 1.71A 1450RPM SF1.25 EFF 82.5% 3.53",
+    "(IE3)CODE M",
+    "300 C T6 809 T4 c T5 T6 \u56fd 6205-ZZ",
+    "200 QT7 T8 T9 3 OT7 6T8 6T9 6204-ZZ",
+    "QT1 OT2 QT3 460 QT1 QT2 QT3 MOBIL POLYREX EM",
+    "YY L1 L2 L3 L1 L2 L3",
+    "For 60Hz: Class I. Div 2, Gr. A, B, C and D T3 ALT 1000 m.0.s.I. 44 Lbs",
+    "Class II, Div 2, Gr. F and G - T5 Closs I, Zone 2, IIC - T3 SP c us 3PT9",
+    "C US",
+    "For use on PWM, Gr. A, B, C, D, F ond G FOR SAFE AREA"
+   ]
+  },
+  "nameplate_10.jpg": {
+   "fields": {
+    "equipment_id": null,
+    "serial_number": "96.01012530.01.0001.05.06",
+    "model": "FH57B DV112M4/BMG",
+    "voltage": "380-460",
+    "manufacture_date": null
+   },
+   "candidates": {
+    "equipment_id": [],
+    "serial_number": [
+     {
+      "value": "96.01012530.01.0001.05.06",
+      "conf": 0.9835827946662903,
+      "anchored": true,
+      "rule": "NR"
+     }
+    ],
+    "model": [
+     {
+      "value": "FH57B DV112M4/BMG",
+      "conf": 0.9943973223368326,
+      "anchored": true,
+      "rule": "TYPE"
+     }
+    ],
+    "voltage": [
+     {
+      "value": "380-460",
+      "conf": 0.9636709094047546,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     },
+     {
+      "value": "380-460",
+      "conf": 0.9636709094047546,
+      "anchored": true,
+      "rule": "VOLT-anchor+lexicon"
+     }
+    ],
+    "manufacture_date": []
+   },
+   "lines": [
+    "I ALFREDIMHOFAG",
+    "CH-4142MUNCHENSTEIN",
+    "Typ FH57B DV112M4/BMG 3~IEC34",
+    "Nr. 96.01012530.01.0001.05.06 IM M1",
+    "kW 4.00 cos\u03c6 0.84",
+    "50HzV 220-240 \u25b3/380-415YA15.20/8.70",
+    "60HzV 240266 \u25b3/ 415-460YA13.80/7.90",
+    "r/min 1420/89 bei-50 Hz IP 55 KI.F",
+    "Bremse V 380-460 AC Nm 55 Gleichrichter BGE1.5",
+    "kg Ma Nm 15.88:1",
+    "Schmierstoff CLP-CC 220 Made in Switzerland C\u20ac"
+   ]
+  }
+ }
+}
