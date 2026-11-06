@@ -1,6 +1,6 @@
 # Task 2 failure cases
 
-Model `best.pt` from `warmstart_e30_2cls_640_fulldata`. Detections kept at conf ≥ 0.25, matched to ground truth at IoU 0.5 in the original image's pixel frame.
+Model `best.pt` from `imgsz640_box_dfl`. Detections kept at conf ≥ 0.25, matched to ground truth at IoU 0.5 in the original image's pixel frame.
 
 The JPEGs are enlarged so the long side is 1600 px. The test photos themselves are about 400–500 px wide. Boxes in `failure_cases.json` are still original-image pixels.
 

@@ -1,7 +1,7 @@
 [
   {
     "model": "A imgsz=640 default COCO-init",
-    "run": "coco_e25",
+    "run": "imgsz640_default_coco",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [
       [
@@ -34,7 +34,7 @@
   },
   {
     "model": "B imgsz=640 default",
-    "run": "warmstart_e25",
+    "run": "imgsz640_default",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [
       [
@@ -67,7 +67,7 @@
   },
   {
     "model": "C imgsz=1088 box+dfl undersampled",
-    "run": "warmstart_e25_2cls_1088",
+    "run": "imgsz1088_box_dfl_undersampled",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [
       [
@@ -100,7 +100,7 @@
   },
   {
     "model": "C imgsz=1088 box+dfl undersampled",
-    "run": "warmstart_e25_2cls_1088",
+    "run": "imgsz1088_box_dfl_undersampled",
     "eval_imgsz": 1088,
     "matrix_pred_by_true": [
       [
@@ -133,7 +133,7 @@
   },
   {
     "model": "D imgsz=1088 box+dfl",
-    "run": "warmstart_e30_2cls_1088_fulldata",
+    "run": "imgsz1088_box_dfl",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [
       [
@@ -166,7 +166,7 @@
   },
   {
     "model": "D imgsz=1088 box+dfl",
-    "run": "warmstart_e30_2cls_1088_fulldata",
+    "run": "imgsz1088_box_dfl",
     "eval_imgsz": 1088,
     "matrix_pred_by_true": [
       [
@@ -199,7 +199,7 @@
   },
   {
     "model": "E imgsz=640 box+dfl (FINAL)",
-    "run": "warmstart_e30_2cls_640_fulldata",
+    "run": "imgsz640_box_dfl",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [
       [

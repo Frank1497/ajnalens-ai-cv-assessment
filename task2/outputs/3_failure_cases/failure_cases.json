@@ -1,5 +1,5 @@
 {
-  "model": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.pt",
+  "model": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/imgsz640_box_dfl/weights/best.pt",
   "conf": 0.25,
   "match_iou": 0.5,
   "coordinate_space": "original image pixels (label x image width/height, prediction xyxy)",

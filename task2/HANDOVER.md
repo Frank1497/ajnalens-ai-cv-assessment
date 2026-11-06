@@ -1,15 +1,15 @@
 TASK 2 HANDOVER — Hard-Hat Detector
-Status: complete against the 6 requirements in the assessment PDF. Final model: warmstart_e30_2cls_640_fulldata, deployed as TensorRT FP16.
+Status: complete against the 6 requirements in the assessment PDF. Final model: imgsz640_box_dfl, deployed as TensorRT FP16.
 Every number below was read from a file in task2/outputs/ on 6 Nov 2026 IST. README.md carries the full tables and the written answers.
 
 FINAL MODEL
-  task2/outputs/runs/warmstart_e30_2cls_640_fulldata/weights/
-    best.pt               PyTorch FP32, 6.2 MB
+  task2/outputs/runs/imgsz640_box_dfl/weights/best.pt   PyTorch FP32, 6.2 MB
+  task2/outputs/4_export/
     best.onnx             ONNX FP32, 12.3 MB, opset 17, static 1x3x640x640
     best_fp16.onnx        ONNX FP16, 6.2 MB
     best.engine           raw TensorRT plan, 7.8 MB
     best_labeled.engine   same plan behind a 246-byte Ultralytics header (class names). Used by the PPE video and by the benchmark.
-  2 classes (head, helmet), 30 epochs, batch 32, imgsz 640, box 10, dfl 2.0, warm-start from keremberke hard-hat weights.
+  2 classes (head, helmet), 30 epochs, batch 32, imgsz 640, box 10, dfl 2.0, started from the keremberke hard-hat weights.
 
 REQUIREMENT CHECKLIST
   1 fine-tune, hyperparameters and why     README "Hyperparameters and why"; results.csv (30 epochs)
@@ -31,10 +31,10 @@ Exports on the full test split (4_export/export_parity_test.json)
   The three agree within 0.0003.
 
 Benchmark, same 100 sorted test images, batch 1, imgsz 640, RTX 5070 Ti (5_benchmark/benchmark.md)
-  pytorch              3.36 ms   297.2 FPS   mAP50 0.975
-  onnx_fp16_cuda       2.13 ms   470.1 FPS   mAP50 0.974   (CUDAExecutionProvider confirmed active)
-  tensorrt_fp16_cuda   1.27 ms   787.3 FPS   mAP50 0.973
-  TensorRT is 2.6x PyTorch and 1.7x ONNX end to end. Network forward alone: 0.32 ms vs 2.37 and 1.11 ms.
+  pytorch              3.39 ms   295.1 FPS   mAP50 0.975
+  onnx_fp16_cuda       2.20 ms   455.0 FPS   mAP50 0.974   (CUDAExecutionProvider confirmed active)
+  tensorrt_fp16_cuda   1.34 ms   746.0 FPS   mAP50 0.973
+  TensorRT is 2.5x PyTorch and 1.6x ONNX end to end. Network forward alone: 0.33 ms vs 2.39 and 1.20.
 
 WHY THE ENGINE, AND WHY THIS TRAINING RUN (extras/model_comparison/model_selection.md, model_selection_latency.json)
   Test split, same labels for every run. default = box 7.5 / dfl 1.5, box+dfl = box 10 / dfl 2.0:
@@ -58,23 +58,23 @@ OUTPUT FOLDER LAYOUT (reorganised 6 Nov 2026 IST; every command re-run afterward
   outputs/1_training  2_evaluation  3_failure_cases  4_export  5_benchmark  6_ppe_violation   one folder per spec requirement
   outputs/extras/model_comparison   runs A to E scored and compared (justifies the final model)
   outputs/extras/generalization_test   extra check on 10 outside images
-  outputs/runs   training runs and weights (task1 config points at runs/warmstart_e30_2cls_640_fulldata/weights/best_labeled.engine)
+  outputs/runs   training runs and weights (task1 config points at 4_export/best_labeled.engine)
   outputs/.scratch   Ultralytics val output, regenerated, git-ignored
-  Benchmark reduced to the three formats on request and re-run: TensorRT 787.3 FPS. Accuracy values reproduced exactly.
+  Benchmark reduced to the three formats on request and re-run: TensorRT 746.0 FPS. Accuracy values reproduced exactly.
 
 CORRECTIONS MADE THIS PASS
   - generalization_test/detections.json came from an older model and conf 0.35. 8 of 10 images differed from the final model. Regenerated at conf 0.25. Now 2 empty images, not 3.
   - confusion_by_run.json had no mAP fields. Added from model_selection.json.
-  - I overwrote the stored curves and confusion matrices with the old 3-class run by accident (default run was warmstart_e25). Restored from the final run. DEFAULT_RUN now points at the final run.
+  - I overwrote the stored curves and confusion matrices with the old 3-class run by accident (default run was imgsz640_default). Restored from the final run. DEFAULT_RUN now points at the final run.
   - Confusion matrices were drawn at conf 0.001 and showed 12,648 background false positives on val. They are now drawn at conf 0.25.
   - Earlier text said 1088 hurt mAP50-95. That scored D at 640, not at its own size. Corrected in README and model_selection.md.
-  - Benchmark now includes TensorRT. The earlier 544.7 FPS row came from an ad hoc script and was never saved. The saved 787.3 FPS is measured by `hardhat_pipeline.py benchmark`.
+  - Benchmark now includes TensorRT. The earlier 544.7 FPS row came from an ad hoc script and was never saved. The saved FPS is measured by `hardhat_pipeline.py benchmark`.
   - The earlier "TensorRT serialization version mismatch" was the Ultralytics metadata header, not a version problem.
   - PPE video drew helmets on the crane because any box merely touching a person box counted. Now a box binds to a person only by centre inside the top half of the person box; unbound boxes are dropped. Rule covered by 7 assertion cases; frames at 20 s, 60 s, 100 s viewed. Video regenerated at 15:44 IST.
   - Failure-case images had been drawn with labels multiplied by 640 on an unresized frame. Redrawn in original pixel coordinates.
 
 CLEANUP DONE (5.7 GB to 737 MB in task2/)
-  Removed: .npy image caches (6,329 files), 1.9 GB CLI avi, empty bench/eval dirs, duplicate best.fp16.onnx, warmstart_e25 best.onnx, old onnx_parity_test.json, failure_match_cache.json, benchmark_100 symlink dir, empty notebooks/, __pycache__, repo-root runs/.
+  Removed: .npy image caches (6,329 files), 1.9 GB CLI avi, empty bench/eval dirs, duplicate best.fp16.onnx, imgsz640_default best.onnx, old onnx_parity_test.json, failure_match_cache.json, benchmark_100 symlink dir, empty notebooks/, __pycache__, repo-root runs/.
   Kept: every training run folder (args.yaml, results.csv, plots, weights) and every eval folder, so the selection table can be reproduced and explained.
   task2/.gitignore added: data splits, videos, last.pt, caches are ignored. The final weights and exports are un-ignored (149 MB staged, no file over 50 MB).
   Weights and training logs of runs A to D stay on disk and are ignored by git.

@@ -1,15 +1,15 @@
-"""Hard-hat (PPE) detector: download -> warm-start -> train -> evaluate -> export -> benchmark -> generalize.
+"""Hard-hat (PPE) detector: download -> prepare-weights -> train -> evaluate -> export -> benchmark -> generalize.
 
 Every stage is a subcommand so the whole run is reproducible from a clean checkout:
 
     source .venv/bin/activate
     python task2/src/hardhat_pipeline.py download
-    python task2/src/hardhat_pipeline.py warmstart
+    python task2/src/hardhat_pipeline.py prepare-weights
     python task2/src/hardhat_pipeline.py train --epochs 25 --batch 32
     python task2/src/hardhat_pipeline.py evaluate
     python task2/src/hardhat_pipeline.py export
-    python task2/src/hardhat_pipeline.py benchmark --run warmstart_e30_2cls_640_fulldata
-    python task2/src/hardhat_pipeline.py failures --run warmstart_e30_2cls_640_fulldata
+    python task2/src/hardhat_pipeline.py benchmark --run imgsz640_box_dfl
+    python task2/src/hardhat_pipeline.py failures --run imgsz640_box_dfl
     python task2/src/hardhat_pipeline.py generalize --src task2/outputs/generalization_test/inputs
 
 ROBOFLOW_API_KEY is read from the repo-root .env and never printed.
@@ -65,13 +65,13 @@ for _d in (SCRATCH, TRAIN_DIR, EVAL_DIR, FAIL_DIR, EXPORT_DIR, BENCH_DIR, COMPAR
     _d.mkdir(parents=True, exist_ok=True)
 
 RF_WORKSPACE, RF_PROJECT, RF_VERSION = "joseph-nelson", "hard-hat-workers", 10
-WARM_URL = "https://huggingface.co/keremberke/yolov8n-hard-hat-detection/resolve/main/best.pt"
-WARM_SRC = WEIGHTS / "keremberke_yolov8n_hardhat.pt"
-WARM_REMAPPED = WEIGHTS / "warmstart_remapped_3cls.pt"
+START_URL = "https://huggingface.co/keremberke/yolov8n-hard-hat-detection/resolve/main/best.pt"
+START_SRC = WEIGHTS / "keremberke_yolov8n_hardhat.pt"
+START_REMAPPED = WEIGHTS / "keremberke_remapped_3cls.pt"
 # keremberke class -> Roboflow class. 'person' has no source channel and keeps a fresh init.
 CLASS_REMAP = {"Hardhat": "helmet", "NO-Hardhat": "head"}
 
-DEFAULT_RUN = "warmstart_e30_2cls_640_fulldata"
+DEFAULT_RUN = "imgsz640_box_dfl"
 SEED = 0
 
 
@@ -121,18 +121,18 @@ def cmd_download(_: argparse.Namespace) -> None:
     print(f"classes={cfg['names']} images={counts} license={cfg.get('roboflow', {}).get('license')}")
 
 
-# --------------------------------------------------------------------------- warm start
-def cmd_warmstart(_: argparse.Namespace) -> None:
+# --------------------------------------------------------------------------- start weights
+def cmd_prepare_weights(_: argparse.Namespace) -> None:
     """Build a 3-class YOLOv8n whose backbone/neck/box-head AND matching class channels come from keremberke."""
     import urllib.request
 
     import torch
     from ultralytics.nn.tasks import DetectionModel, torch_safe_load
 
-    if not WARM_SRC.exists():
+    if not START_SRC.exists():
         WEIGHTS.mkdir(parents=True, exist_ok=True)
-        urllib.request.urlretrieve(WARM_URL, WARM_SRC)
-    ckpt, _path = torch_safe_load(str(WARM_SRC))
+        urllib.request.urlretrieve(START_URL, START_SRC)
+    ckpt, _path = torch_safe_load(str(START_SRC))
     src = (ckpt.get("ema") or ckpt["model"]).float()
     src_names = [src.names[i] for i in range(len(src.names))]
     dst_names = read_names()
@@ -159,7 +159,7 @@ def cmd_warmstart(_: argparse.Namespace) -> None:
     dst.load_state_dict(dst_sd)
 
     report = {
-        "source": WARM_URL,
+        "source": START_URL,
         "source_classes": src_names,
         "target_classes": dst_names,
         "class_remap": CLASS_REMAP,
@@ -170,8 +170,8 @@ def cmd_warmstart(_: argparse.Namespace) -> None:
         "source_train_args": {k: ckpt.get("train_args", {}).get(k) for k in ("epochs", "imgsz", "batch", "data")},
     }
     torch.save({"model": dst.half(), "ema": None, "epoch": -1, "optimizer": None, "train_args": {},
-                "date": time.strftime("%Y-%m-%d"), "version": "warmstart-remap"}, WARM_REMAPPED)
-    (TRAIN_DIR / "warmstart_transfer.json").write_text(json.dumps(report, indent=2))
+                "date": time.strftime("%Y-%m-%d"), "version": "keremberke-remap"}, START_REMAPPED)
+    (TRAIN_DIR / "keremberke_transfer.json").write_text(json.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
 
 
@@ -180,7 +180,7 @@ def cmd_train(a: argparse.Namespace) -> None:
     from ultralytics import YOLO
 
     _ultralytics_home()  # 'yolov8n.pt' resolves inside task2/weights/ (downloaded there on first use)
-    model = YOLO(str(WARM_REMAPPED) if a.init == "warmstart" else "yolov8n.pt")
+    model = YOLO(str(START_REMAPPED) if a.init == "hardhat" else "yolov8n.pt")
     # cache='ram' at imgsz>=1088 risks the kernel OOM-killer (image cache + worker buffers can exceed
     # system RAM); 'disk' is Ultralytics' own recommended deterministic fallback, used above 640px.
     cache_mode = "ram" if a.imgsz <= 640 else "disk"
@@ -257,7 +257,7 @@ def cmd_evaluate(a: argparse.Namespace) -> None:
     results = {}
     evals = [(best_weights(a.run), "val", f"eval_{a.run}_val"),
              (best_weights(a.run), "test", f"eval_{a.run}_test"),
-             (WARM_REMAPPED, "val", "eval_warmstart_epoch0_val")]
+             (START_REMAPPED, "val", "eval_start_weights_epoch0_val")]
     if a.baseline and best_weights(a.baseline).exists():
         evals.append((best_weights(a.baseline), "test", f"eval_{a.baseline}_test"))
     for w, split, tag in evals:
@@ -281,7 +281,7 @@ def cmd_evaluate(a: argparse.Namespace) -> None:
           "Checkpoint selected on **val**; **test** was never used for selection.", ""]
     md.append(_md_table("Held-out TEST split (706 images)", results[f"eval_{a.run}_test"]))
     md.append(_md_table("VALID split (1413 images, used for best.pt selection)", results[f"eval_{a.run}_val"]))
-    md.append(_md_table("Warm-start checkpoint BEFORE fine-tuning (epoch 0, val)", results["eval_warmstart_epoch0_val"]))
+    md.append(_md_table("Keremberke hard-hat checkpoint BEFORE fine-tuning (epoch 0, val)", results["eval_start_weights_epoch0_val"]))
     if f"eval_{a.baseline}_test" in results:
         md.append(_md_table(f"Control: generic COCO yolov8n.pt, same recipe (test)", results[f"eval_{a.baseline}_test"]))
     (EVAL_DIR / "metrics.md").write_text("\n".join(md))
@@ -308,7 +308,7 @@ def _label_engine(raw_engine: Path, imgsz: int) -> Path:
 
 
 def cmd_label_engine(a: argparse.Namespace) -> None:
-    out = _label_engine(best_weights(a.run).parent / "best.engine", a.imgsz)
+    out = _label_engine(EXPORT_DIR / "best.engine", a.imgsz)
     print(f"wrote {out} ({out.stat().st_size / 1e6:.2f} MB)")
 
 
@@ -358,6 +358,14 @@ def cmd_export(a: argparse.Namespace) -> None:
         exported["tensorrt_fp16_raw"] = str(engine_path)
         exported["tensorrt_fp16_labeled"] = str(_label_engine(engine_path, a.imgsz))
 
+    # Exported models live in 4_export/. Only best.pt stays in runs/.
+    for k, v in list(exported.items()):
+        p = Path(v)
+        if p.parent != EXPORT_DIR:
+            shutil.move(str(p), EXPORT_DIR / p.name)
+            exported[k] = str(EXPORT_DIR / p.name)
+    exported = {"pytorch": str(best_weights(a.run)), **exported}
+    exported = {k: str(Path(v).relative_to(TASK2)) for k, v in exported.items()}
     (EXPORT_DIR / f"export_{a.run}.json").write_text(json.dumps(exported, indent=2))
 
     if a.parity:
@@ -365,11 +373,11 @@ def cmd_export(a: argparse.Namespace) -> None:
 
 
 SELECTION_RUNS = [  # (label, run dir, train imgsz, note). default = Ultralytics box 7.5 / dfl 1.5. box+dfl = box 10 / dfl 2.0.
-    ("A imgsz=640 default COCO-init", "coco_e25", 640, "COCO yolov8n start, 3-class, 25 ep"),
-    ("B imgsz=640 default", "warmstart_e25", 640, "hard-hat weights start, 3-class, 25 ep"),
-    ("C imgsz=1088 box+dfl undersampled", "warmstart_e25_2cls_1088", 1088, "2-class, helmet-only images dropped, 25 ep"),
-    ("D imgsz=1088 box+dfl", "warmstart_e30_2cls_1088_fulldata", 1088, "2-class, full data, 30 ep"),
-    ("E imgsz=640 box+dfl (FINAL)", "warmstart_e30_2cls_640_fulldata", 640, "2-class, full data, 30 ep"),
+    ("A imgsz=640 default COCO-init", "imgsz640_default_coco", 640, "COCO yolov8n start, 3-class, 25 ep"),
+    ("B imgsz=640 default", "imgsz640_default", 640, "hard-hat weights start, 3-class, 25 ep"),
+    ("C imgsz=1088 box+dfl undersampled", "imgsz1088_box_dfl_undersampled", 1088, "2-class, helmet-only images dropped, 25 ep"),
+    ("D imgsz=1088 box+dfl", "imgsz1088_box_dfl", 1088, "2-class, full data, 30 ep"),
+    ("E imgsz=640 box+dfl (FINAL)", "imgsz640_box_dfl", 640, "2-class, full data, 30 ep"),
 ]
 
 
@@ -382,8 +390,8 @@ def _selection_latency(n: int = 100, warmup: int = 10) -> None:
 
     imgs = [cv2.imread(str(p)) for p in sorted((DATA_DIR / "test" / "images").glob("*.jpg"))[:n]]
     out = {}
-    for tag, run, sz in (("E_imgsz640", "warmstart_e30_2cls_640_fulldata", 640),
-                         ("D_imgsz1088", "warmstart_e30_2cls_1088_fulldata", 1088)):
+    for tag, run, sz in (("E_imgsz640", "imgsz640_box_dfl", 640),
+                         ("D_imgsz1088", "imgsz1088_box_dfl", 1088)):
         m = YOLO(str(RUNS / run / "weights" / "best.pt"))
         ms = _timed(lambda x: m.predict(x, imgsz=sz, conf=OPERATING_CONF, verbose=False, device=0), warmup, imgs,
                     torch.cuda.synchronize)
@@ -514,9 +522,8 @@ def _write_confusion_md(rows: list[dict]) -> None:
 
 def _export_files(run: str) -> dict[str, Path]:
     """The three formats compared everywhere: PyTorch, ONNX FP16 (CUDA), TensorRT FP16 (CUDA)."""
-    w = best_weights(run).parent
-    files = {"pytorch": w / "best.pt", "onnx_fp16_cuda": w / "best_fp16.onnx",
-             "tensorrt_fp16_cuda": w / "best_labeled.engine"}  # labeled = Ultralytics header with class names
+    files = {"pytorch": best_weights(run), "onnx_fp16_cuda": EXPORT_DIR / "best_fp16.onnx",
+             "tensorrt_fp16_cuda": EXPORT_DIR / "best_labeled.engine"}  # labeled = Ultralytics header with class names
     return {k: v for k, v in files.items() if v.exists()}
 
 
@@ -965,9 +972,9 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("download").set_defaults(fn=cmd_download)
-    sub.add_parser("warmstart").set_defaults(fn=cmd_warmstart)
+    sub.add_parser("prepare-weights", help="download keremberke hard-hat weights and remap to head/helmet").set_defaults(fn=cmd_prepare_weights)
     t = sub.add_parser("train")
-    t.add_argument("--init", choices=["warmstart", "coco"], default="warmstart")
+    t.add_argument("--init", choices=["hardhat", "coco"], default="hardhat")
     t.add_argument("--epochs", type=int, default=25)
     t.add_argument("--batch", type=int, default=32)
     t.add_argument("--workers", type=int, default=8)
@@ -978,7 +985,7 @@ def main() -> None:
     t.set_defaults(fn=cmd_train)
     e = sub.add_parser("evaluate")
     e.add_argument("--run", default=DEFAULT_RUN)
-    e.add_argument("--baseline", default="coco_e25")
+    e.add_argument("--baseline", default="imgsz640_default_coco")
     e.set_defaults(fn=cmd_evaluate)
     c = sub.add_parser("confusion", help="confusion matrices at conf 0.25 for val and test")
     c.add_argument("--run", default=DEFAULT_RUN)

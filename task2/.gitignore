@@ -18,11 +18,11 @@ outputs/runs/*/weights/last.pt
 __pycache__/
 
 # Root .gitignore drops *.pt and *.onnx. The FINAL model and its exports are Task 2 deliverables (about 32 MB), keep them.
-!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.pt
-!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.onnx
-!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_fp16.onnx
-!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.engine
-!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_labeled.engine
+!outputs/runs/imgsz640_box_dfl/weights/best.pt
+!outputs/4_export/best.onnx
+!outputs/4_export/best_fp16.onnx
+!outputs/4_export/best.engine
+!outputs/4_export/best_labeled.engine
 # Warm-start init and the person detector are inputs to the pipeline.
-!weights/warmstart_remapped_3cls.pt
+!weights/keremberke_remapped_3cls.pt
 !weights/yolo11n.pt

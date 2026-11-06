@@ -1,0 +1,7 @@
+{
+  "pytorch": "outputs/runs/imgsz640_box_dfl/weights/best.pt",
+  "onnx_fp32": "outputs/4_export/best.onnx",
+  "onnx_fp16": "outputs/4_export/best_fp16.onnx",
+  "tensorrt_fp16_raw": "outputs/4_export/best.engine",
+  "tensorrt_fp16_labeled": "outputs/4_export/best_labeled.engine"
+}

@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/weights/warmstart_remapped_3cls.pt
+model: /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/weights/keremberke_remapped_3cls.pt
 data: /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/data/data_abs.yaml
 epochs: 30
 time: null
@@ -13,7 +13,7 @@ cache: ram
 device: "0"
 workers: 8
 project: /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs
-name: warmstart_e30_2cls_640_fulldata
+name: imgsz640_box_dfl
 exist_ok: true
 pretrained: true
 cls_remap: true
@@ -111,4 +111,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: tracktrack.yaml
-save_dir: /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/warmstart_e30_2cls_640_fulldata
+save_dir: /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/imgsz640_box_dfl

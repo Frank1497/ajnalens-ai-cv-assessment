@@ -45,7 +45,7 @@
     "events_json": "outputs/6_ppe_violation/events_cctv_cuplock_ppe.json"
   },
   "ppe": {
-    "model": "../outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_labeled.engine",
+    "model": "../outputs/4_export/best_labeled.engine",
     "conf": 0.35,
     "imgsz": 640,
     "debounce_sec": 1.0
