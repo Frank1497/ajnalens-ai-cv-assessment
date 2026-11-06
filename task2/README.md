@@ -79,7 +79,7 @@ All runs re-scored on the same 706 test images, head and helmet only, at their o
 What this supports and what it does not:
 - Spread across A, B, E and D at its own size is 0.006 mAP50-95, from single runs with one seed. That is too small to rank the models by accuracy.
 - D scores 0.676 at 1088, 0.002 above E. Earlier I reported that 1088 lowered mAP50-95. That came from scoring D at 640, which is not the size it was trained for. It was wrong and is corrected here.
-- E was chosen for cost, not for a measurable accuracy win. On the RTX 5070 Ti, PyTorch predict takes 3.45 ms at 640 and 4.38 ms at 1088 (`outputs/extras/model_comparison/model_selection_latency.json`), and 1088 pixels is 2.9 times the pixel count. The edge cost was not measured.
+- E was chosen for cost, not for a measurable accuracy win. On the RTX 5070 Ti, PyTorch predict takes 3.45 ms at 640 and 4.50 ms at 1088 (`outputs/extras/model_comparison/model_selection_latency.json`), and 1088 pixels is 2.9 times the pixel count. The edge cost was not measured.
 - Undersampling helmet-only images (C) did not help. Full data was restored.
 
 ### Confusion matrix of every run
@@ -101,7 +101,7 @@ Reading it:
 - E has the fewest missed helmets at 640 (65). D at 1088 is close (71) and has the fewest helmets called head (2) and the fewest background false positives on head (55).
 - Every run has 130 to 150 background false positives on helmet. Run C, which undersampled helmet-only images, did not reduce them. It added 27 missed heads at 640.
 - The two COCO-start and hard-hat-start 3-class runs match the 2-class runs closely. The class change moved no cell by more than a few percent.
-- D at 1088 is not worse than E on any safety-relevant cell. E remains the choice on speed (3.45 ms against 4.38 ms) and on one training size serving the engine, not on a measured accuracy gain.
+- D at 1088 is not worse than E on any safety-relevant cell. E remains the choice on speed (3.45 ms against 4.50 ms) and on one training size serving the engine, not on a measured accuracy gain.
 
 ## Valid split (requirement 2)
 
