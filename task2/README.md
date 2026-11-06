@@ -84,6 +84,8 @@ What this supports and what it does not:
 
 ### Confusion matrix of every run
 
+**Open `outputs/extras/model_comparison/confusion_by_run.md` to see every matrix as an image**: the side-by-side grid, the count table, and one count plus one normalized matrix per run.
+
 Same procedure for all: test split, IoU 0.7, head and helmet only (`outputs/extras/model_comparison/confusion_by_run.md` and `.json`). Confusion counts are at conf 0.25, the operating threshold. mAP is at conf 0.001, the mAP protocol, and comes from `model_selection.json`. Figure with all panels and mAP in each title: `outputs/extras/model_comparison/confusion_by_run/ALL_RUNS.png`. Runs A and B are 3-class, so their `person` predictions are dropped from the 3x3 view.
 
 | model | imgsz | mAP50 | mAP50-95 | head ok /726 | head as helmet | head missed | helmet ok /1915 | helmet as head | helmet missed | bg FP head | bg FP helmet |

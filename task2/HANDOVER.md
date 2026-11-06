@@ -54,7 +54,7 @@ WHY THE ENGINE, AND WHY THIS TRAINING RUN (extras/model_comparison/)
 
 CONFUSION MATRICES (test, conf 0.25)
   Final model (2_evaluation/test_confusion_matrix.png): head 689 right, 17 called helmet, 20 missed. Helmet 1843 right, 7 called head, 65 missed. Background false positives: 72 head, 139 helmet.
-  Every run (extras/model_comparison/confusion_by_run.md and confusion_by_run/ALL_RUNS.png):
+  Every run: open extras/model_comparison/confusion_by_run.md. It embeds the grid image (ALL_RUNS.png), the count table, and one count and one normalized matrix per run.
     bare head called helmet (the costly error): A 14, B 12, C 10 / 12, D 14 / 12, E 17.   Missed helmets: E 65, D@1088 71, others 72 to 107.
   E is highest on the costly error, by 3 to 7 boxes of 726. One seed per run, so not significant. D@1088 matches or beats E on the safety cells. E was chosen on cost.
 

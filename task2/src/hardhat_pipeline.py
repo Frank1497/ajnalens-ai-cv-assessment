@@ -514,10 +514,17 @@ def _write_confusion_md(rows: list[dict]) -> None:
         md.append(f"| {r['model'].split(',')[0]} ({r['run']}) | {r['eval_imgsz']} | {m['mAP50']:.3f} | {m['mAP50-95']:.3f} | "
                   f"{r['head_correct']} | {r['head_called_helmet']} | {r['head_missed']} | {r['helmet_correct']} | "
                   f"{r['helmet_called_head']} | {r['helmet_missed']} | {r['background_fp_head']} | {r['background_fp_helmet']} |")
-    (COMPARE_DIR / "confusion_by_run.md").write_text(
-        "Test split, 706 images, IoU 0.7, head and helmet only. Confusion counts at conf 0.25 (operating threshold). "
-        "mAP at conf 0.001 (the mAP protocol), from model_selection.json. Runs A and B are 3-class and their person "
-        "predictions are dropped.\n\n" + "\n".join(md) + "\n")
+    out = ["# Confusion matrix of every training run", "",
+           "Test split, 706 images, IoU 0.7, head and helmet only. Counts at conf 0.25 (operating threshold). "
+           "mAP at conf 0.001 (the mAP protocol), from model_selection.json. Runs A and B are 3-class and their "
+           "person predictions are dropped. Cell = detections, columns are the true class.", "",
+           "## All runs side by side", "", "![all runs](confusion_by_run/ALL_RUNS.png)", "",
+           "## Counts and mAP", ""] + md + ["", "## One matrix per run (count, then normalized by true class)", ""]
+    for r in rows:
+        tag = f"{r['run']}_{r['eval_imgsz']}"
+        out += [f"### {r['model']} evaluated at {r['eval_imgsz']} px  (mAP50 {r['mAP50']:.3f}, mAP50-95 {r['mAP50-95']:.3f})", "",
+                f"![{tag}](confusion_by_run/{tag}.png) ![{tag} normalized](confusion_by_run/{tag}_normalized.png)", ""]
+    (COMPARE_DIR / "confusion_by_run.md").write_text("\n".join(out) + "\n")
 
 
 def _export_files(run: str) -> dict[str, Path]:
