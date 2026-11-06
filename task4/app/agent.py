@@ -30,15 +30,18 @@ from google.genai import errors as genai_errors
 from .retriever import retrieve
 from .tools import TOOL_DECLARATIONS, TOOL_IMPLS
 
-# Load GEMINI_API_KEY from the Hermes profile .env (never hardcode the key).
-load_dotenv("/home/franklyn/.hermes/profiles/kratos/.env")
-load_dotenv()  # also allow a local .env to override/extend if present
+# GEMINI_API_KEY comes from the environment or a .env file (see .env.example).
+# An optional Hermes profile .env is read too when it exists on this machine.
+_HERMES_ENV = os.path.expanduser("~/.hermes/profiles/kratos/.env")
+if os.path.isfile(_HERMES_ENV):
+    load_dotenv(_HERMES_ENV)
+load_dotenv()  # a local .env overrides/extends if present
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise RuntimeError(
-        "GEMINI_API_KEY not found in environment. Set it in "
-        "/home/franklyn/.hermes/profiles/kratos/.env or export it before running."
+        "GEMINI_API_KEY not found. Export it or put it in a .env file "
+        "(see .env.example) before running."
     )
 
 MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-3-flash-preview")

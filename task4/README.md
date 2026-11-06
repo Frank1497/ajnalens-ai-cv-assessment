@@ -120,21 +120,22 @@ redistributed or modified beyond chunking for the index. 72 pages total,
 calling in this account; `gemini-2.5-flash` / `gemini-flash-latest` were
 unavailable/deprecated for this API key at the time of building -- the model
 name is overridable via the `GEMINI_MODEL` env var if it changes again).
-The free-tier API key used here is rate-limited to 5 requests/minute, so the
-test-question runner paces requests ~15s apart; `agent.py` also has a
-built-in retry/backoff for transient `429`/`503` responses.
+The free-tier key used here allows 20 requests per day on this model (the
+`429 RESOURCE_EXHAUSTED` text states the limit). Each `/ask` costs one or more
+requests, so five questions plus retries can exhaust it. `agent.py` has retry/backoff for
+transient `429`/`503` and connection errors, which does not help once the daily
+limit is spent; use a billed key for repeated runs.
 
 ## Setup & run
 
 Run these commands from the **repository root** (`ai-cv-assessment`), not from inside `task4/`. The app is the package `task4.app`, so the uvicorn target is `task4.app.main:app`.
 
 ```bash
-cd /home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment
+cd ai-cv-assessment
 source .venv/bin/activate
 uv pip install google-genai    # one-time, if the Gemini SDK is not installed yet
 
 # GEMINI_API_KEY: put it in the repo-root .env (see .env.example), or export it.
-# agent.py also loads ~/.hermes/profiles/kratos/.env when that file exists.
 #   export GEMINI_API_KEY=...
 
 # Optional. Startup builds the FAISS index automatically when it is missing.
@@ -249,7 +250,6 @@ accuracy before being reported as final.
 
 ## Environment variable
 
-`GEMINI_API_KEY` must be set (loaded by default from
-`/home/franklyn/.hermes/profiles/kratos/.env`, or export it yourself). No
+`GEMINI_API_KEY` must be set: export it, or put it in a `.env` file at the repo root. No
 real key is committed anywhere in this repo -- see the root-level
 `.env.example` for the variable name only.

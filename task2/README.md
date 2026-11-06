@@ -22,8 +22,16 @@ YOLOv8n fine-tuned for 30 epochs on Roboflow Universe **Hard Hat Workers** (jose
 
 ## Run
 
+One command runs the whole pipeline on existing weights and data, then the PPE check:
+
 ```bash
 source .venv/bin/activate
+python task2/src/hardhat_pipeline.py evaluate && python task2/src/zone_monitor.py --config task2/configs/zone_cctv_cuplock_ppe.json
+```
+
+First run only: `python task2/src/hardhat_pipeline.py download` fetches the dataset and `prepare-weights` builds the start weights. The full sequence, one step per requirement:
+
+```bash
 python task2/src/hardhat_pipeline.py train --init hardhat --epochs 30 --batch 32 --imgsz 1088 --box 10 --dfl 2.0 --name imgsz1088_box_dfl
 python task2/src/hardhat_pipeline.py evaluate                 # metrics.md, curves, confusion matrices (conf 0.25)
 python task2/src/hardhat_pipeline.py confusion-all              # confusion_by_run/, one matrix per kept run
@@ -211,7 +219,7 @@ Same 100 sorted test images, batch 1, imgsz 1088, RTX 5070 Ti. Latency is end-to
 
 `task2/src/zone_monitor.py` runs the Task 1 tracker and adds the helmet engine at imgsz 1088. A head or helmet box is bound to a tracked person only when its centre lies inside that person's box and in the top half of it, where a head sits. A box bound to nobody, such as a helmet-shaped part of the crane, is discarded and never drawn. A person with a bound helmet is green and labelled helmet. Otherwise the ID is red, labelled no helmet, and a `PPE_VIOLATION` interval opens. The label is held for 1 second before it changes (`ppe.debounce_sec`). Without that hold the same clip gave 8 violations from detector dropouts.
 
-`outputs/6_ppe_violation/events_cctv_cuplock_ppe.json` has 32 records: 18 IDLE_ALERT, 13 ZONE_ENTRY and 1 PPE_VIOLATION. The 31 zone and idle records match `task1/outputs/events_cctv_cuplock.json` exactly. The run covered 2391 frames at 26.14 FPS including tracking and drawing.
+`outputs/6_ppe_violation/events_cctv_cuplock_ppe.json` has 32 records: 18 IDLE_ALERT, 13 ZONE_ENTRY and 1 PPE_VIOLATION. The 31 zone and idle records match `task1/outputs/events_cctv_cuplock.json` exactly. The run covered 2391 frames at 26.14 FPS including tracking and drawing. The latest run, with the live preview window open, logged 17.88 FPS (`outputs/6_ppe_violation/run_log_ppe.txt`).
 
 The one violation is track 3, 17.47 s to 17.57 s, on a worker in dark clothes bent over under the crane hook. At 15.0 s the worker is green with a helmet box on a yellow hard hat. At 17.45 s and 17.55 s the head is turned down and hidden and the box reads no helmet. That is a short, ambiguous event: the worker does wear a hard hat earlier, and the model cannot see it at the end. It is a likely false alarm, and the README does not claim otherwise.
 

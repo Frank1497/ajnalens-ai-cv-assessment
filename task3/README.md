@@ -4,6 +4,20 @@ Pipeline: **label photo → OpenCV preprocess → OCR engine → field extractio
 
 20 nameplate photos, three engines (EasyOCR, Tesseract psm 4, classic PaddleOCR), scored field by field against a hand-made `labels_ground_truth.csv`.
 
+## In brief
+
+20 public nameplate photos, ground truth written by hand, three engines compared on identical input. PaddleOCR reads 64 of 77 printed fields (87% overall, serial CER 0.188). EasyOCR reads 16 and Tesseract reads 7.
+
+Preprocessing raises PaddleOCR from 69% to 87%. It leaves EasyOCR (37% to 36%) and Tesseract (29% to 29%) flat on field accuracy, though both improve on serial CER. The 87% is in-sample: 20 photos, no held-out split. Per-image boards and the 0/O answer are further down this file.
+
+```bash
+source .venv/bin/activate
+export PATH="$HOME/.local/bin:$PATH"
+python3 task3/src/run_pipeline.py
+```
+
+Task 3 needs two things outside the main environment: a Tesseract binary (user-local build in `.tools/tesseract/`) and a separate Paddle environment `.venv_paddle_cpu/` (`requirements_paddle.txt`).
+
 ## Results
 
 With OpenCV preprocessing (100 cells = 20 images x 5 fields; "printed" = the 77 cells whose ground truth is non-empty):

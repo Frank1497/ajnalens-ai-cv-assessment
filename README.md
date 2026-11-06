@@ -9,27 +9,41 @@ Four tasks, one folder each. Every task has a `README.md` (what it does, how to 
 | 3 | OCR with structured extraction: motor nameplate photos to five JSON fields | [task3/README.md](task3/README.md) |
 | 4 | Maintenance assistant: RAG over pump manuals with tool calling, served by FastAPI | [task4/README.md](task4/README.md) |
 
-Numbers for Tasks 1, 2 and 4 live in their own READMEs. They are not repeated here.
+Numbers, run commands and answers to the "Answer briefly" questions live in each task's own README. They are not repeated here.
 
-## Task 3 in brief
+## Hardware used
 
-Pipeline: label photo, OpenCV preprocess, OCR engine, field extraction, JSON and accuracy report. 20 public nameplate photos, ground truth written by hand, three engines compared on identical input.
+All runs and timings: NVIDIA GeForce RTX 5070 Ti (16 GB), Intel i5-13600K, 30 GB RAM, Ubuntu 26.04, Python 3.11.16. A GPU is optional for Tasks 3 and 4 (PaddleOCR runs on CPU, Gemini runs remotely). Tasks 1 and 2 were only timed on this GPU.
 
-| Reader | Overall (100 cells) | Printed fields | Serial CER |
-|---|---:|---:|---:|
-| EasyOCR | 36% | 16/77 | 0.586 |
-| Tesseract (psm 4) | 29% | 7/77 | 0.771 |
-| PaddleOCR | 87% | 64/77 | 0.188 |
+## Results at a glance
 
-Preprocessing raises PaddleOCR from 69% to 87%. It leaves EasyOCR (37% to 36%) and Tesseract (29% to 29%) flat on field accuracy, though both improve on serial CER. The 87% is in-sample: 20 photos, no held-out split. Details, per-image boards and the 0/O answer are in [task3/README.md](task3/README.md).
+Every number below is copied from the task README that owns it. Open that README for the file the number was read from.
 
-```bash
-source .venv/bin/activate
-export PATH="$HOME/.local/bin:$PATH"
-python3 task3/src/run_pipeline.py
-```
+| Task | Result | Detail |
+|---|---|---|
+| 1 | 2391 frames of 2560x1440 CCTV tracked. 31 events (13 ZONE_ENTRY, 18 IDLE_ALERT), none left open. 29.08 FPS in the earlier verified run, 18.24 FPS in the latest run with the live window open (`task1/outputs/run_log.txt`). The cause of the gap is not measured. | [task1/README.md](task1/README.md) |
+| 2 | Test split, 706 images: mAP50 0.973, mAP50-95 0.676. TensorRT FP16 engine 2.15 ms (465 FPS), PyTorch 4.31 ms (232 FPS), 100 images, batch 1. PPE run adds 1 PPE_VIOLATION to the 31 Task 1 events. | [task2/README.md](task2/README.md) |
+| 3 | PaddleOCR 87% overall (64/77 printed fields, serial CER 0.188) against EasyOCR 36% and Tesseract 29%. In-sample, 20 photos. | [task3/README.md](task3/README.md) |
+| 4 | 5 of 5 test questions answered through `POST /ask` with citations. Q1 and Q4 call `get_equipment_status`. Q3 correctly declines. | [task4/README.md](task4/README.md) |
 
-Task 3 needs two things outside the main environment: a Tesseract binary (user-local build in `.tools/tesseract/`) and a separate Paddle environment `.venv_paddle_cpu/` (`task3/requirements_paddle.txt`).
+## Answers to the "Answer briefly" questions
+
+| Task | Question | Where |
+|---|---|---|
+| 1 | Why the foot point instead of the box centre? | [task1/README.md](task1/README.md#why-use-the-foot-point-instead-of-the-box-centre) |
+| 1 | Stopping an ID swap after a 2 second occlusion | [task1/README.md](task1/README.md#how-would-you-stop-one-persons-id-swapping-after-they-are-hidden-for-2-seconds) |
+| 2 | Many more helmet boxes than head boxes; 30 FPS on a Jetson Orin Nano | [task2/README.md](task2/README.md#answers) |
+| 3 | Reducing 0/O and 1/I confusion without retraining | [task3/README.md](task3/README.md#answer-briefly-reducing-0o-and-1i-confusion-without-retraining) |
+| 4 | Measuring retrieval quality; camera-on-a-part extension | [task4/README.md](task4/README.md#answers-to-required-questions) |
+
+## Assumptions
+
+- No data was supplied. Task 1 uses a real 120 s workshop CCTV clip kept outside the repo (over 100 MB). Tasks 2, 3 and 4 use public datasets and manuals, listed with licences in [data/README.md](data/README.md).
+- Task 1 events are start/stop intervals, not one record per frame. Every field the brief asks for is present as a start and stop pair.
+- Task 2 trains two classes, `head` and `helmet`. The `person` class in the dataset was dropped. The checkpoint was chosen on the valid split, never on test.
+- Task 3 ground truth was read by hand from the plates. A field the plate does not print is `null`, never a guess.
+- Task 4 uses Google Gemini for the LLM and tool calling, not Anthropic. Equipment status is mock data held in `task4/app/tools.py`.
+- Large videos are on Google Drive and linked from `.txt` files in the folders that would hold them.
 
 ## Setup
 
@@ -41,7 +55,7 @@ pip uninstall -y opencv-python-headless
 pip install --force-reinstall --no-deps opencv-python==4.10.0.84
 ```
 
-Python 3.10 or later. A GPU is optional. Each task README lists any extra step it needs.
+Python 3.11 (tested on 3.11.16; the pinned numpy 2.4.6 needs 3.11 or later). Each task README lists any extra step it needs.
 
 `easyocr` and `roboflow` depend on `opencv-python-headless`. That wheel overwrites `cv2` and drops `imshow`. The uninstall above puts the GUI build back. `uv pip install -r requirements.txt` skips the headless package because `uv.toml` excludes it, so the extra uninstall is only needed for pip.
 

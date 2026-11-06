@@ -1,16 +1,19 @@
-torch==2.5.1
-torchvision==0.20.1
-ultralytics==8.3.47
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+ultralytics==8.4.202
 # GUI wheel. opencv-python-headless overwrites cv2 and breaks imshow.
 # easyocr and roboflow depend on the headless package; uv.toml excludes it.
 opencv-python==4.10.0.84
 shapely==2.0.6
-onnx==1.17.0
-onnxruntime-gpu==1.19.2
+onnx==1.18.0
+onnxruntime-gpu==1.22.0
+# TensorRT FP16 engine export and inference (Task 2)
+tensorrt-cu13==11.4.0.106
 easyocr==1.7.2
 pytesseract==0.3.13
 pandas==2.2.3
-numpy==1.26.4
+numpy==2.4.6
 matplotlib==3.9.2
 seaborn==0.13.2
 scikit-learn==1.5.2
@@ -19,9 +22,11 @@ sentence-transformers==3.3.1
 pypdf==5.1.0
 fastapi==0.115.6
 uvicorn==0.32.1
-anthropic==0.40.0
+google-genai==2.34.0
+httpx==0.28.1
+pydantic==2.14.2
 python-dotenv==1.0.1
 roboflow==1.1.50
 requests==2.32.3
-Pillow==11.0.0
+Pillow==13.0.0
 lap==0.5.12

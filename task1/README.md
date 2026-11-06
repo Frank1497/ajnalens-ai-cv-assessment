@@ -48,7 +48,8 @@ Outputs: `task1/outputs/output_cctv_cuplock.mp4` (annotated),
 `task1/outputs/run_log.txt` for FPS/hardware (one line, latest run only).
 
 Last verified run: 2391 frames, 29.08 avg FPS, NVIDIA GeForce RTX 5070 Ti,
-31 events written.
+31 events written. The latest run, with the live preview window open, logged 18.24 avg FPS
+(`task1/outputs/run_log.txt`); the gap is not investigated.
 
 PPE (Task 2 requirement 6) is run entirely from Task 2, against the Task 2
 TensorRT engine -- see
