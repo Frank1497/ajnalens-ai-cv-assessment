@@ -132,7 +132,7 @@
     "mAP50-95": 0.6722702221666551
   },
   {
-    "model": "D imgsz=1088 box+dfl",
+    "model": "D imgsz=1088 box+dfl (FINAL)",
     "run": "imgsz1088_box_dfl",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [
@@ -165,7 +165,7 @@
     "mAP50-95": 0.6637142879896809
   },
   {
-    "model": "D imgsz=1088 box+dfl",
+    "model": "D imgsz=1088 box+dfl (FINAL)",
     "run": "imgsz1088_box_dfl",
     "eval_imgsz": 1088,
     "matrix_pred_by_true": [
@@ -198,7 +198,7 @@
     "mAP50-95": 0.6759212382978299
   },
   {
-    "model": "E imgsz=640 box+dfl (FINAL)",
+    "model": "E imgsz=640 box+dfl",
     "run": "imgsz640_box_dfl",
     "eval_imgsz": 640,
     "matrix_pred_by_true": [

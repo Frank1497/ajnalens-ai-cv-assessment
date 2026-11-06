@@ -1,5 +1,5 @@
 {
-  "model": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/imgsz640_box_dfl/weights/best.pt",
+  "model": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/imgsz1088_box_dfl/weights/best.pt",
   "conf": 0.25,
   "match_iou": 0.5,
   "coordinate_space": "original image pixels (label x image width/height, prediction xyxy)",
@@ -11,38 +11,38 @@
       "width": 383,
       "height": 301,
       "category": "false_positive",
-      "reason": "A yellow rounded object on the equipment is scored as helmet at 0.84; it is not a head.",
+      "reason": "A yellow rounded object on the equipment is scored as helmet at 0.77; it is not a head.",
       "true_pos": [
         {
           "cls": "helmet",
-          "conf": 0.865,
+          "conf": 0.846,
           "xyxy": [
-            24.0,
-            66.7,
-            92.6,
-            145.4
+            25.8,
+            65.6,
+            93.2,
+            144.5
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.822,
+          "conf": 0.816,
           "xyxy": [
             227.3,
-            36.5,
-            284.4,
-            105.9
+            35.8,
+            283.1,
+            107.2
           ]
         }
       ],
       "false_pos": [
         {
           "cls": "helmet",
-          "conf": 0.835,
+          "conf": 0.768,
           "xyxy": [
-            139.2,
-            165.6,
-            187.3,
-            206.9
+            139.4,
+            166.3,
+            185.2,
+            207.5
           ]
         }
       ],
@@ -59,72 +59,72 @@
       "true_pos": [
         {
           "cls": "head",
-          "conf": 0.849,
+          "conf": 0.867,
           "xyxy": [
-            64.0,
-            94.4,
-            109.5,
-            146.7
+            64.7,
+            94.5,
+            108.4,
+            147.6
           ]
         },
         {
           "cls": "head",
-          "conf": 0.843,
+          "conf": 0.858,
           "xyxy": [
-            129.8,
-            82.1,
-            167.2,
-            132.1
-          ]
-        },
-        {
-          "cls": "head",
-          "conf": 0.832,
-          "xyxy": [
-            294.8,
+            295.1,
             90.0,
-            328.6,
-            133.4
+            329.7,
+            133.7
+          ]
+        },
+        {
+          "cls": "head",
+          "conf": 0.856,
+          "xyxy": [
+            130.8,
+            82.7,
+            166.8,
+            131.4
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.828,
+          "conf": 0.821,
           "xyxy": [
-            375.8,
-            132.7,
-            398.2,
-            162.0
+            375.4,
+            133.0,
+            398.9,
+            162.1
           ]
         },
         {
           "cls": "head",
-          "conf": 0.814,
+          "conf": 0.801,
           "xyxy": [
-            220.2,
-            84.2,
-            254.4,
-            126.3
+            88.8,
+            80.4,
+            122.1,
+            126.8
           ]
         },
         {
           "cls": "head",
-          "conf": 0.779,
+          "conf": 0.794,
           "xyxy": [
-            87.6,
-            81.0,
-            121.9,
-            124.7
+            169.2,
+            91.6,
+            201.0,
+            134.7
           ]
         },
         {
           "cls": "head",
-          "conf": 0.737,
+          "conf": 0.77,
           "xyxy": [
-            172.3,
-            92.7,
-            201.1,
-            134.9
+            220.9,
+            86.2,
+            254.3,
+            128.2
           ]
         }
       ],
@@ -140,7 +140,7 @@
           ],
           "short_side_px": 27.0,
           "best_same_class_conf": 0.001,
-          "best_same_class_iou": 0.24
+          "best_same_class_iou": 0.103
         }
       ],
       "swaps": []
@@ -151,56 +151,56 @@
       "width": 500,
       "height": 333,
       "category": "class_confusion",
-      "reason": "A wide-brimmed felt hat, labeled head, is called helmet at 0.82, so a non-hard-hat would be treated as compliant.",
+      "reason": "A wide-brimmed felt hat, labeled head, is called helmet at 0.83, so a non-hard-hat would be treated as compliant.",
       "true_pos": [
         {
           "cls": "helmet",
-          "conf": 0.892,
+          "conf": 0.899,
           "xyxy": [
-            68.6,
-            31.6,
-            139.2,
-            111.2
+            163.7,
+            38.3,
+            214.1,
+            96.9
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.891,
+          "conf": 0.895,
           "xyxy": [
-            163.0,
-            37.2,
-            214.4,
-            98.2
+            295.8,
+            71.0,
+            336.3,
+            123.0
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.891,
+          "conf": 0.887,
           "xyxy": [
-            295.6,
-            70.9,
-            334.9,
-            123.6
+            411.3,
+            93.2,
+            444.6,
+            135.1
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.873,
+          "conf": 0.88,
           "xyxy": [
-            410.9,
-            92.9,
-            445.2,
-            135.6
+            69.0,
+            30.4,
+            138.5,
+            112.0
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.778,
+          "conf": 0.783,
           "xyxy": [
-            21.9,
-            96.8,
-            43.0,
-            123.8
+            21.2,
+            96.9,
+            43.4,
+            124.4
           ]
         }
       ],
@@ -210,13 +210,13 @@
         {
           "gt_cls": "head",
           "pred_cls": "helmet",
-          "conf": 0.82,
-          "iou": 0.784,
+          "conf": 0.826,
+          "iou": 0.823,
           "xyxy": [
-            345.9,
-            71.8,
-            392.7,
-            118.9
+            344.0,
+            70.9,
+            396.6,
+            120.9
           ],
           "gt_xyxy": [
             340.0,
@@ -233,56 +233,56 @@
       "width": 450,
       "height": 300,
       "category": "small_object_miss",
-      "reason": "The helmet is about 10 px tall on a person far up the slope; foreground helmets are detected and this one scores 0.002.",
+      "reason": "The helmet is about 10 px tall on a person far up the slope; foreground helmets are detected and this one scores 0.013.",
       "true_pos": [
         {
           "cls": "helmet",
-          "conf": 0.889,
+          "conf": 0.903,
           "xyxy": [
-            371.3,
-            0.9,
+            290.1,
+            62.5,
+            334.6,
+            112.3
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.886,
+          "xyxy": [
+            117.8,
+            107.7,
+            159.1,
+            152.8
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.885,
+          "xyxy": [
+            371.5,
+            0.5,
             449.2,
-            69.4
-          ]
-        },
-        {
-          "cls": "helmet",
-          "conf": 0.88,
-          "xyxy": [
-            289.6,
-            62.0,
-            334.9,
-            111.5
-          ]
-        },
-        {
-          "cls": "helmet",
-          "conf": 0.873,
-          "xyxy": [
-            117.5,
-            108.2,
-            160.1,
-            153.8
+            71.4
           ]
         },
         {
           "cls": "helmet",
           "conf": 0.85,
           "xyxy": [
-            74.8,
-            130.2,
-            108.7,
-            164.4
+            75.2,
+            130.4,
+            107.1,
+            164.7
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.789,
+          "conf": 0.795,
           "xyxy": [
-            22.2,
+            22.3,
             175.4,
-            49.3,
-            203.3
+            48.7,
+            202.3
           ]
         }
       ],
@@ -297,8 +297,8 @@
             51.0
           ],
           "short_side_px": 10.0,
-          "best_same_class_conf": 0.002,
-          "best_same_class_iou": 0.686
+          "best_same_class_conf": 0.013,
+          "best_same_class_iou": 0.741
         }
       ],
       "swaps": []
@@ -313,36 +313,57 @@
       "true_pos": [
         {
           "cls": "helmet",
-          "conf": 0.655,
+          "conf": 0.778,
           "xyxy": [
-            257.4,
-            345.6,
-            289.1,
-            381.3
+            135.1,
+            318.4,
+            153.6,
+            339.2
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.554,
+          "conf": 0.773,
           "xyxy": [
-            133.4,
-            316.4,
-            154.1,
-            339.5
+            258.5,
+            347.2,
+            287.8,
+            377.4
           ]
         },
         {
           "cls": "helmet",
-          "conf": 0.303,
+          "conf": 0.548,
           "xyxy": [
-            187.6,
-            307.2,
-            205.5,
-            325.3
+            188.4,
+            307.8,
+            204.5,
+            324.4
           ]
         }
       ],
-      "false_pos": [],
+      "false_pos": [
+        {
+          "cls": "helmet",
+          "conf": 0.378,
+          "xyxy": [
+            255.9,
+            312.0,
+            270.8,
+            328.2
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.342,
+          "xyxy": [
+            291.6,
+            296.8,
+            305.6,
+            313.6
+          ]
+        }
+      ],
       "false_negs": [
         {
           "cls": "helmet",
@@ -353,8 +374,8 @@
             326.0
           ],
           "short_side_px": 9.0,
-          "best_same_class_conf": 0.03,
-          "best_same_class_iou": 0.271
+          "best_same_class_conf": 0.378,
+          "best_same_class_iou": 0.483
         },
         {
           "cls": "helmet",
@@ -365,8 +386,8 @@
             323.0
           ],
           "short_side_px": 13.0,
-          "best_same_class_conf": 0.003,
-          "best_same_class_iou": 0.502
+          "best_same_class_conf": 0.002,
+          "best_same_class_iou": 0.687
         },
         {
           "cls": "helmet",
@@ -377,8 +398,8 @@
             321.0
           ],
           "short_side_px": 14.0,
-          "best_same_class_conf": 0.001,
-          "best_same_class_iou": 0.532
+          "best_same_class_conf": 0.188,
+          "best_same_class_iou": 0.778
         }
       ],
       "swaps": []

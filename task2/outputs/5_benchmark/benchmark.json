@@ -1,5 +1,5 @@
 {
-  "run": "imgsz640_box_dfl",
+  "run": "imgsz1088_box_dfl",
   "images": 100,
   "image_names": [
     "005298_jpg.rf.a45f45b9d3abc292b3d0e53ff944adfc.jpg",
@@ -105,54 +105,54 @@
   ],
   "source": "first N test-split images (sorted filename)",
   "batch": 1,
-  "imgsz": 640,
+  "imgsz": 1088,
   "latency": "end-to-end Ultralytics predict (preprocess + inference + NMS), conf 0.25, 10 untimed warm-up calls first (GPU clocks and TensorRT contexts settle)",
-  "map_protocol": "ultralytics val, conf 0.001, NMS IoU 0.7, imgsz 640, batch 1, same images",
+  "map_protocol": "ultralytics val, conf 0.001, NMS IoU 0.7, imgsz 1088, batch 1, same images",
   "gpu": "NVIDIA GeForce RTX 5070 Ti",
   "torch": "2.11.0+cu128",
   "onnxruntime": "1.22.0",
   "files": {
     "pytorch": "best.pt",
     "onnx_fp16_cuda": "best_fp16.onnx",
-    "tensorrt_fp16_cuda": "best_labeled.engine"
+    "tensorrt_fp16_cuda": "best.engine"
   },
   "end_to_end_ultralytics_predict": {
     "pytorch": {
       "n": 100,
-      "mean_ms": 3.388946920458693,
-      "median_ms": 2.689426502911374,
-      "p90_ms": 3.2028629793785512,
-      "fps": 295.0769142954444,
-      "preprocess_ms_mean": 0.472376890538726,
-      "inference_ms_mean": 2.3902655704296194,
-      "postprocess_ms_mean": 0.38539401255548,
-      "mAP50": 0.9749792612479931
+      "mean_ms": 4.306705459021032,
+      "median_ms": 3.3677659957902506,
+      "p90_ms": 4.030888987472281,
+      "fps": 232.196050906001,
+      "preprocess_ms_mean": 1.0062249304610305,
+      "inference_ms_mean": 2.749758259160444,
+      "postprocess_ms_mean": 0.40141292702173814,
+      "mAP50": 0.9738492782208938
     },
     "onnx_fp16_cuda": {
       "n": 100,
-      "mean_ms": 2.1979717002250254,
-      "median_ms": 2.142519995686598,
-      "p90_ms": 2.410098008112982,
-      "fps": 454.9649114670682,
-      "preprocess_ms_mean": 0.45840140024665743,
-      "inference_ms_mean": 1.2001260169199668,
-      "postprocess_ms_mean": 0.41465504036750644,
+      "mean_ms": 3.6702880094526336,
+      "median_ms": 3.584475489333272,
+      "p90_ms": 4.205459990771487,
+      "fps": 272.45818241635334,
+      "preprocess_ms_mean": 1.0988254388212226,
+      "inference_ms_mean": 1.9565626414259896,
+      "postprocess_ms_mean": 0.4698463378008455,
       "providers_active": [
         "CUDAExecutionProvider",
         "CPUExecutionProvider"
       ],
-      "mAP50": 0.9735481816251692
+      "mAP50": 0.9777166078935233
     },
     "tensorrt_fp16_cuda": {
       "n": 100,
-      "mean_ms": 1.3404594187159091,
-      "median_ms": 1.2713255127891898,
-      "p90_ms": 1.4597849803976715,
-      "fps": 746.0128863564913,
-      "preprocess_ms_mean": 0.4759446094976738,
-      "inference_ms_mean": 0.3291064579389058,
-      "postprocess_ms_mean": 0.41540352074662223,
-      "mAP50": 0.97321407967891
+      "mean_ms": 2.1490161496330984,
+      "median_ms": 2.074231000733562,
+      "p90_ms": 2.327080990653485,
+      "fps": 465.32921596272325,
+      "preprocess_ms_mean": 1.0381400998448953,
+      "inference_ms_mean": 0.5704754815087654,
+      "postprocess_ms_mean": 0.41433965059695765,
+      "mAP50": 0.9773896969994889
     }
   }
 }

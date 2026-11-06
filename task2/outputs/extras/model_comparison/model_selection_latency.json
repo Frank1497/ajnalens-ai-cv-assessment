@@ -1,20 +1,20 @@
 {
+  "D_imgsz1088_final": {
+    "run": "imgsz1088_box_dfl",
+    "imgsz": 1088,
+    "images": 100,
+    "mean_ms": 4.46,
+    "median_ms": 3.37,
+    "p90_ms": 5.2,
+    "fps": 224.41
+  },
   "E_imgsz640": {
     "run": "imgsz640_box_dfl",
     "imgsz": 640,
     "images": 100,
     "mean_ms": 3.45,
-    "median_ms": 2.74,
-    "p90_ms": 3.37,
-    "fps": 289.62
-  },
-  "D_imgsz1088": {
-    "run": "imgsz1088_box_dfl",
-    "imgsz": 1088,
-    "images": 100,
-    "mean_ms": 4.5,
-    "median_ms": 3.46,
-    "p90_ms": 5.17,
-    "fps": 222.3
+    "median_ms": 2.83,
+    "p90_ms": 3.29,
+    "fps": 289.61
   }
 }

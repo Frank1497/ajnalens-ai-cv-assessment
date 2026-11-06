@@ -43,15 +43,15 @@
     "event": "PPE_VIOLATION",
     "track_id": 3,
     "label": "no helmet",
-    "start_frame": 322,
-    "start_sec": 16.16,
+    "start_frame": 348,
+    "start_sec": 17.47,
     "stop_frame": 350,
     "stop_sec": 17.57,
     "start_box": [
-      698,
-      644,
-      824,
-      930
+      728,
+      638,
+      898,
+      905
     ],
     "stop_box": [
       723,

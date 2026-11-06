@@ -45,9 +45,9 @@
     "events_json": "outputs/6_ppe_violation/events_cctv_cuplock_ppe.json"
   },
   "ppe": {
-    "model": "../outputs/4_export/best_labeled.engine",
+    "model": "../outputs/4_export/best.engine",
     "conf": 0.35,
-    "imgsz": 640,
+    "imgsz": 1088,
     "debounce_sec": 1.0
   }
 }

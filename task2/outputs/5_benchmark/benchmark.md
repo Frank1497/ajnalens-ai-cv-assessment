@@ -1,7 +1,7 @@
 | backend | mean ms | median ms | FPS | model-only ms | mAP50 |
 |---|---:|---:|---:|---:|---:|
-| pytorch | 3.39 | 2.69 | 295.1 | 2.39 | 0.975 |
-| onnx_fp16_cuda | 2.20 | 2.14 | 455.0 | 1.20 | 0.974 |
-| tensorrt_fp16_cuda | 1.34 | 1.27 | 746.0 | 0.33 | 0.973 |
+| pytorch | 4.31 | 3.37 | 232.2 | 2.75 | 0.974 |
+| onnx_fp16_cuda | 3.67 | 3.58 | 272.5 | 1.96 | 0.978 |
+| tensorrt_fp16_cuda | 2.15 | 2.07 | 465.3 | 0.57 | 0.977 |
 
-First 100 sorted test images, batch 1, imgsz 640, NVIDIA GeForce RTX 5070 Ti. Mean ms is end-to-end predict at conf 0.25. Model-only is the network forward. mAP50 is Ultralytics val on the same images.
+First 100 sorted test images, batch 1, imgsz 1088, NVIDIA GeForce RTX 5070 Ti. Mean ms is end-to-end predict at conf 0.25. Model-only is the network forward. mAP50 is Ultralytics val on the same images.
