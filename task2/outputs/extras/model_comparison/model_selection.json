@@ -1,0 +1,79 @@
+[
+  {
+    "model": "A imgsz=640 default COCO-init",
+    "run": "coco_e25",
+    "trained_imgsz": 640,
+    "eval_imgsz": 640,
+    "note": "COCO yolov8n start, 3-class, 25 ep",
+    "P": 0.9545826833019745,
+    "R": 0.9247311136115528,
+    "mAP50": 0.9719879657812139,
+    "mAP50-95": 0.6701292908161103
+  },
+  {
+    "model": "B imgsz=640 default",
+    "run": "warmstart_e25",
+    "trained_imgsz": 640,
+    "eval_imgsz": 640,
+    "note": "hard-hat weights start, 3-class, 25 ep",
+    "P": 0.9529527051629672,
+    "R": 0.9336452716664436,
+    "mAP50": 0.9713539178122077,
+    "mAP50-95": 0.6707456836951403
+  },
+  {
+    "model": "C imgsz=1088 box+dfl undersampled",
+    "run": "warmstart_e25_2cls_1088",
+    "trained_imgsz": 1088,
+    "eval_imgsz": 640,
+    "note": "2-class, helmet-only images dropped, 25 ep",
+    "P": 0.9413884221966486,
+    "R": 0.9237400110768257,
+    "mAP50": 0.9644025310488691,
+    "mAP50-95": 0.662213779090058
+  },
+  {
+    "model": "C imgsz=1088 box+dfl undersampled",
+    "run": "warmstart_e25_2cls_1088",
+    "trained_imgsz": 1088,
+    "eval_imgsz": 1088,
+    "note": "2-class, helmet-only images dropped, 25 ep",
+    "P": 0.9470874330441746,
+    "R": 0.9424548532941825,
+    "mAP50": 0.9763512077515777,
+    "mAP50-95": 0.6722702221666551
+  },
+  {
+    "model": "D imgsz=1088 box+dfl",
+    "run": "warmstart_e30_2cls_1088_fulldata",
+    "trained_imgsz": 1088,
+    "eval_imgsz": 640,
+    "note": "2-class, full data, 30 ep",
+    "P": 0.9438628682289621,
+    "R": 0.9290486658756705,
+    "mAP50": 0.9670415645578543,
+    "mAP50-95": 0.6637142879896809
+  },
+  {
+    "model": "D imgsz=1088 box+dfl",
+    "run": "warmstart_e30_2cls_1088_fulldata",
+    "trained_imgsz": 1088,
+    "eval_imgsz": 1088,
+    "note": "2-class, full data, 30 ep",
+    "P": 0.9457241670933645,
+    "R": 0.9446295562190113,
+    "mAP50": 0.9727526540702329,
+    "mAP50-95": 0.6759212382978299
+  },
+  {
+    "model": "E imgsz=640 box+dfl (FINAL)",
+    "run": "warmstart_e30_2cls_640_fulldata",
+    "trained_imgsz": 640,
+    "eval_imgsz": 640,
+    "note": "2-class, full data, 30 ep",
+    "P": 0.9411757895774318,
+    "R": 0.9401211258082847,
+    "mAP50": 0.9725781014557502,
+    "mAP50-95": 0.6738353316188976
+  }
+]

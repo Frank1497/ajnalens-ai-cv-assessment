@@ -1,0 +1,25 @@
+{
+  "source": "https://huggingface.co/keremberke/yolov8n-hard-hat-detection/resolve/main/best.pt",
+  "source_classes": [
+    "Hardhat",
+    "NO-Hardhat"
+  ],
+  "target_classes": [
+    "head",
+    "helmet"
+  ],
+  "class_remap": {
+    "Hardhat": "helmet",
+    "NO-Hardhat": "head"
+  },
+  "tensors_total": 355,
+  "tensors_copied_exact": 355,
+  "tensors_class_remapped": 0,
+  "tensors_fresh_init": [],
+  "source_train_args": {
+    "epochs": 2,
+    "imgsz": 640,
+    "batch": 8,
+    "data": "D:\\dev\\yolov5\\datasets\\Hard-Hats-2/data.yaml"
+  }
+}

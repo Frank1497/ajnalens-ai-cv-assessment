@@ -1,0 +1,233 @@
+[
+  {
+    "model": "A imgsz=640 default COCO-init",
+    "run": "coco_e25",
+    "eval_imgsz": 640,
+    "matrix_pred_by_true": [
+      [
+        689,
+        5,
+        66
+      ],
+      [
+        14,
+        1830,
+        136
+      ],
+      [
+        23,
+        80,
+        0
+      ]
+    ],
+    "head_correct": 689,
+    "head_called_helmet": 14,
+    "head_missed": 23,
+    "helmet_correct": 1830,
+    "helmet_called_head": 5,
+    "helmet_missed": 80,
+    "background_fp_head": 66,
+    "background_fp_helmet": 136,
+    "predicted_person_dropped": 29,
+    "mAP50": 0.9719879657812139,
+    "mAP50-95": 0.6701292908161103
+  },
+  {
+    "model": "B imgsz=640 default",
+    "run": "warmstart_e25",
+    "eval_imgsz": 640,
+    "matrix_pred_by_true": [
+      [
+        691,
+        5,
+        68
+      ],
+      [
+        12,
+        1829,
+        132
+      ],
+      [
+        23,
+        81,
+        0
+      ]
+    ],
+    "head_correct": 691,
+    "head_called_helmet": 12,
+    "head_missed": 23,
+    "helmet_correct": 1829,
+    "helmet_called_head": 5,
+    "helmet_missed": 81,
+    "background_fp_head": 68,
+    "background_fp_helmet": 132,
+    "predicted_person_dropped": 16,
+    "mAP50": 0.9713539178122077,
+    "mAP50-95": 0.6707456836951403
+  },
+  {
+    "model": "C imgsz=1088 box+dfl undersampled",
+    "run": "warmstart_e25_2cls_1088",
+    "eval_imgsz": 640,
+    "matrix_pred_by_true": [
+      [
+        689,
+        10,
+        64
+      ],
+      [
+        10,
+        1798,
+        136
+      ],
+      [
+        27,
+        107,
+        0
+      ]
+    ],
+    "head_correct": 689,
+    "head_called_helmet": 10,
+    "head_missed": 27,
+    "helmet_correct": 1798,
+    "helmet_called_head": 10,
+    "helmet_missed": 107,
+    "background_fp_head": 64,
+    "background_fp_helmet": 136,
+    "predicted_person_dropped": 0,
+    "mAP50": 0.9644025310488691,
+    "mAP50-95": 0.662213779090058
+  },
+  {
+    "model": "C imgsz=1088 box+dfl undersampled",
+    "run": "warmstart_e25_2cls_1088",
+    "eval_imgsz": 1088,
+    "matrix_pred_by_true": [
+      [
+        702,
+        9,
+        65
+      ],
+      [
+        12,
+        1834,
+        135
+      ],
+      [
+        12,
+        72,
+        0
+      ]
+    ],
+    "head_correct": 702,
+    "head_called_helmet": 12,
+    "head_missed": 12,
+    "helmet_correct": 1834,
+    "helmet_called_head": 9,
+    "helmet_missed": 72,
+    "background_fp_head": 65,
+    "background_fp_helmet": 135,
+    "predicted_person_dropped": 0,
+    "mAP50": 0.9763512077515777,
+    "mAP50-95": 0.6722702221666551
+  },
+  {
+    "model": "D imgsz=1088 box+dfl",
+    "run": "warmstart_e30_2cls_1088_fulldata",
+    "eval_imgsz": 640,
+    "matrix_pred_by_true": [
+      [
+        685,
+        7,
+        81
+      ],
+      [
+        14,
+        1817,
+        150
+      ],
+      [
+        27,
+        91,
+        0
+      ]
+    ],
+    "head_correct": 685,
+    "head_called_helmet": 14,
+    "head_missed": 27,
+    "helmet_correct": 1817,
+    "helmet_called_head": 7,
+    "helmet_missed": 91,
+    "background_fp_head": 81,
+    "background_fp_helmet": 150,
+    "predicted_person_dropped": 0,
+    "mAP50": 0.9670415645578543,
+    "mAP50-95": 0.6637142879896809
+  },
+  {
+    "model": "D imgsz=1088 box+dfl",
+    "run": "warmstart_e30_2cls_1088_fulldata",
+    "eval_imgsz": 1088,
+    "matrix_pred_by_true": [
+      [
+        689,
+        2,
+        55
+      ],
+      [
+        12,
+        1842,
+        142
+      ],
+      [
+        25,
+        71,
+        0
+      ]
+    ],
+    "head_correct": 689,
+    "head_called_helmet": 12,
+    "head_missed": 25,
+    "helmet_correct": 1842,
+    "helmet_called_head": 2,
+    "helmet_missed": 71,
+    "background_fp_head": 55,
+    "background_fp_helmet": 142,
+    "predicted_person_dropped": 0,
+    "mAP50": 0.9727526540702329,
+    "mAP50-95": 0.6759212382978299
+  },
+  {
+    "model": "E imgsz=640 box+dfl (FINAL)",
+    "run": "warmstart_e30_2cls_640_fulldata",
+    "eval_imgsz": 640,
+    "matrix_pred_by_true": [
+      [
+        689,
+        7,
+        72
+      ],
+      [
+        17,
+        1843,
+        139
+      ],
+      [
+        20,
+        65,
+        0
+      ]
+    ],
+    "head_correct": 689,
+    "head_called_helmet": 17,
+    "head_missed": 20,
+    "helmet_correct": 1843,
+    "helmet_called_head": 7,
+    "helmet_missed": 65,
+    "background_fp_head": 72,
+    "background_fp_helmet": 139,
+    "predicted_person_dropped": 0,
+    "mAP50": 0.9725781014557502,
+    "mAP50-95": 0.6738353316188976
+  }
+]

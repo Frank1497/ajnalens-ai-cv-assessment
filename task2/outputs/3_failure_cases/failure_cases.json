@@ -1,0 +1,387 @@
+{
+  "model": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.pt",
+  "conf": 0.25,
+  "match_iou": 0.5,
+  "coordinate_space": "original image pixels (label x image width/height, prediction xyxy)",
+  "legend": "blue=true positive, red=false positive, green=missed ground truth, orange/purple=class mix-up",
+  "cases": [
+    {
+      "img": "005791_jpg.rf.def7f267b5154bc17620455038c68e04.jpg",
+      "img_path": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/data/test/images/005791_jpg.rf.def7f267b5154bc17620455038c68e04.jpg",
+      "width": 383,
+      "height": 301,
+      "category": "false_positive",
+      "reason": "A yellow rounded object on the equipment is scored as helmet at 0.84; it is not a head.",
+      "true_pos": [
+        {
+          "cls": "helmet",
+          "conf": 0.865,
+          "xyxy": [
+            24.0,
+            66.7,
+            92.6,
+            145.4
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.822,
+          "xyxy": [
+            227.3,
+            36.5,
+            284.4,
+            105.9
+          ]
+        }
+      ],
+      "false_pos": [
+        {
+          "cls": "helmet",
+          "conf": 0.835,
+          "xyxy": [
+            139.2,
+            165.6,
+            187.3,
+            206.9
+          ]
+        }
+      ],
+      "false_negs": [],
+      "swaps": []
+    },
+    {
+      "img": "005902_jpg.rf.c5a95be3adc01849004a84e8aa22873b.jpg",
+      "img_path": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/data/test/images/005902_jpg.rf.c5a95be3adc01849004a84e8aa22873b.jpg",
+      "width": 500,
+      "height": 333,
+      "category": "missed_detection",
+      "reason": "The labeled head is only the back of a head behind the man in plaid; the best same-class score on that box is 0.001.",
+      "true_pos": [
+        {
+          "cls": "head",
+          "conf": 0.849,
+          "xyxy": [
+            64.0,
+            94.4,
+            109.5,
+            146.7
+          ]
+        },
+        {
+          "cls": "head",
+          "conf": 0.843,
+          "xyxy": [
+            129.8,
+            82.1,
+            167.2,
+            132.1
+          ]
+        },
+        {
+          "cls": "head",
+          "conf": 0.832,
+          "xyxy": [
+            294.8,
+            90.0,
+            328.6,
+            133.4
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.828,
+          "xyxy": [
+            375.8,
+            132.7,
+            398.2,
+            162.0
+          ]
+        },
+        {
+          "cls": "head",
+          "conf": 0.814,
+          "xyxy": [
+            220.2,
+            84.2,
+            254.4,
+            126.3
+          ]
+        },
+        {
+          "cls": "head",
+          "conf": 0.779,
+          "xyxy": [
+            87.6,
+            81.0,
+            121.9,
+            124.7
+          ]
+        },
+        {
+          "cls": "head",
+          "conf": 0.737,
+          "xyxy": [
+            172.3,
+            92.7,
+            201.1,
+            134.9
+          ]
+        }
+      ],
+      "false_pos": [],
+      "false_negs": [
+        {
+          "cls": "head",
+          "xyxy": [
+            356.0,
+            141.0,
+            383.0,
+            173.0
+          ],
+          "short_side_px": 27.0,
+          "best_same_class_conf": 0.001,
+          "best_same_class_iou": 0.24
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "img": "005639_jpg.rf.4783a19b458cb90f8c6204403be8f54d.jpg",
+      "img_path": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/data/test/images/005639_jpg.rf.4783a19b458cb90f8c6204403be8f54d.jpg",
+      "width": 500,
+      "height": 333,
+      "category": "class_confusion",
+      "reason": "A wide-brimmed felt hat, labeled head, is called helmet at 0.82, so a non-hard-hat would be treated as compliant.",
+      "true_pos": [
+        {
+          "cls": "helmet",
+          "conf": 0.892,
+          "xyxy": [
+            68.6,
+            31.6,
+            139.2,
+            111.2
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.891,
+          "xyxy": [
+            163.0,
+            37.2,
+            214.4,
+            98.2
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.891,
+          "xyxy": [
+            295.6,
+            70.9,
+            334.9,
+            123.6
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.873,
+          "xyxy": [
+            410.9,
+            92.9,
+            445.2,
+            135.6
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.778,
+          "xyxy": [
+            21.9,
+            96.8,
+            43.0,
+            123.8
+          ]
+        }
+      ],
+      "false_pos": [],
+      "false_negs": [],
+      "swaps": [
+        {
+          "gt_cls": "head",
+          "pred_cls": "helmet",
+          "conf": 0.82,
+          "iou": 0.784,
+          "xyxy": [
+            345.9,
+            71.8,
+            392.7,
+            118.9
+          ],
+          "gt_xyxy": [
+            340.0,
+            68.0,
+            394.0,
+            120.0
+          ]
+        }
+      ]
+    },
+    {
+      "img": "005853_jpg.rf.17371fc987e9260d0b1210c602692684.jpg",
+      "img_path": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/data/test/images/005853_jpg.rf.17371fc987e9260d0b1210c602692684.jpg",
+      "width": 450,
+      "height": 300,
+      "category": "small_object_miss",
+      "reason": "The helmet is about 10 px tall on a person far up the slope; foreground helmets are detected and this one scores 0.002.",
+      "true_pos": [
+        {
+          "cls": "helmet",
+          "conf": 0.889,
+          "xyxy": [
+            371.3,
+            0.9,
+            449.2,
+            69.4
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.88,
+          "xyxy": [
+            289.6,
+            62.0,
+            334.9,
+            111.5
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.873,
+          "xyxy": [
+            117.5,
+            108.2,
+            160.1,
+            153.8
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.85,
+          "xyxy": [
+            74.8,
+            130.2,
+            108.7,
+            164.4
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.789,
+          "xyxy": [
+            22.2,
+            175.4,
+            49.3,
+            203.3
+          ]
+        }
+      ],
+      "false_pos": [],
+      "false_negs": [
+        {
+          "cls": "helmet",
+          "xyxy": [
+            355.0,
+            41.0,
+            365.0,
+            51.0
+          ],
+          "short_side_px": 10.0,
+          "best_same_class_conf": 0.002,
+          "best_same_class_iou": 0.686
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "img": "005742_jpg.rf.9f634e2411cd258071d2e0fbe25bca33.jpg",
+      "img_path": "/home/franklyn/Documents/projects/ajnalens-assignment/ai-cv-assessment/task2/data/test/images/005742_jpg.rf.9f634e2411cd258071d2e0fbe25bca33.jpg",
+      "width": 500,
+      "height": 667,
+      "category": "several_misses",
+      "reason": "Three helmets of 9-14 px on the far workers are missed, while the larger helmets closer to the camera are detected.",
+      "true_pos": [
+        {
+          "cls": "helmet",
+          "conf": 0.655,
+          "xyxy": [
+            257.4,
+            345.6,
+            289.1,
+            381.3
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.554,
+          "xyxy": [
+            133.4,
+            316.4,
+            154.1,
+            339.5
+          ]
+        },
+        {
+          "cls": "helmet",
+          "conf": 0.303,
+          "xyxy": [
+            187.6,
+            307.2,
+            205.5,
+            325.3
+          ]
+        }
+      ],
+      "false_pos": [],
+      "false_negs": [
+        {
+          "cls": "helmet",
+          "xyxy": [
+            260.0,
+            313.0,
+            269.0,
+            326.0
+          ],
+          "short_side_px": 9.0,
+          "best_same_class_conf": 0.03,
+          "best_same_class_iou": 0.271
+        },
+        {
+          "cls": "helmet",
+          "xyxy": [
+            139.0,
+            307.0,
+            152.0,
+            323.0
+          ],
+          "short_side_px": 13.0,
+          "best_same_class_conf": 0.003,
+          "best_same_class_iou": 0.502
+        },
+        {
+          "cls": "helmet",
+          "xyxy": [
+            238.0,
+            304.0,
+            252.0,
+            321.0
+          ],
+          "short_side_px": 14.0,
+          "best_same_class_conf": 0.001,
+          "best_same_class_iou": 0.532
+        }
+      ],
+      "swaps": []
+    }
+  ]
+}

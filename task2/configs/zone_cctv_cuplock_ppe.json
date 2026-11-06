@@ -1,0 +1,53 @@
+{
+  "zone": {
+    "name": "crane_working_envelope",
+    "polygon": [
+      [
+        0,
+        528
+      ],
+      [
+        992,
+        528
+      ],
+      [
+        992,
+        1440
+      ],
+      [
+        0,
+        1440
+      ]
+    ],
+    "exit_grace_sec": 2.0
+  },
+  "idle": {
+    "pixel_threshold": 25,
+    "seconds_threshold": 5.0,
+    "radius_mode": "box_width_fraction",
+    "box_width_fraction": 0.25
+  },
+  "detection": {
+    "model": "../weights/yolo11n.pt",
+    "conf_threshold": 0.5,
+    "imgsz": 1088,
+    "iou": 0.5,
+    "classes": [
+      0
+    ]
+  },
+  "tracker": {
+    "type": "../src/botsort_tuned.yaml"
+  },
+  "video": {
+    "source": "/home/franklyn/Documents/projects/ajnalens-assignment/raw_footage/task1_cctv/Cuplock-1_CCTV_CCTV_20250823100919_20250823101719_919368_first120s.mp4",
+    "output": "outputs/6_ppe_violation/output_cctv_cuplock_ppe.mp4",
+    "events_json": "outputs/6_ppe_violation/events_cctv_cuplock_ppe.json"
+  },
+  "ppe": {
+    "model": "../outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_labeled.engine",
+    "conf": 0.35,
+    "imgsz": 640,
+    "debounce_sec": 1.0
+  }
+}

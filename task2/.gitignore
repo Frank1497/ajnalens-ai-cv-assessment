@@ -1,0 +1,28 @@
+# Dataset: 3.4 GB of Roboflow images. Re-download with `python task2/src/hardhat_pipeline.py download`.
+data/train/
+data/valid/
+data/test/
+
+# Videos exceed GitHub's 100 MB file limit. Regenerate with task2/src/zone_monitor.py.
+outputs/**/*.mp4
+outputs/**/*.avi
+
+# Training scratch
+outputs/.scratch/
+outputs/runs/*/train_batch*.jpg
+outputs/runs/*/val_batch*.jpg
+outputs/runs/*/labels.jpg
+outputs/runs/*/weights/last.pt
+*.cache
+*.npy
+__pycache__/
+
+# Root .gitignore drops *.pt and *.onnx. The FINAL model and its exports are Task 2 deliverables (about 32 MB), keep them.
+!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.pt
+!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.onnx
+!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_fp16.onnx
+!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.engine
+!outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_labeled.engine
+# Warm-start init and the person detector are inputs to the pipeline.
+!weights/warmstart_remapped_3cls.pt
+!weights/yolo11n.pt

@@ -1,0 +1,20 @@
+{
+  "E_imgsz640": {
+    "run": "warmstart_e30_2cls_640_fulldata",
+    "imgsz": 640,
+    "images": 100,
+    "mean_ms": 3.45,
+    "median_ms": 2.85,
+    "p90_ms": 3.28,
+    "fps": 289.48
+  },
+  "D_imgsz1088": {
+    "run": "warmstart_e30_2cls_1088_fulldata",
+    "imgsz": 1088,
+    "images": 100,
+    "mean_ms": 4.38,
+    "median_ms": 3.41,
+    "p90_ms": 4.13,
+    "fps": 228.24
+  }
+}

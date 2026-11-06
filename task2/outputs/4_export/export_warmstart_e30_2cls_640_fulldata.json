@@ -1,0 +1,7 @@
+{
+  "pytorch": "outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.pt",
+  "onnx_fp32": "outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.onnx",
+  "onnx_fp16": "outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_fp16.onnx",
+  "tensorrt_fp16_raw": "outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best.engine",
+  "tensorrt_fp16_labeled": "outputs/runs/warmstart_e30_2cls_640_fulldata/weights/best_labeled.engine"
+}

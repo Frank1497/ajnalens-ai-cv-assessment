@@ -1,0 +1,643 @@
+[
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 146,
+    "start_sec": 7.33,
+    "stop_frame": 289,
+    "stop_sec": 14.5,
+    "start_box": [
+      1109,
+      404,
+      1227,
+      693
+    ],
+    "stop_box": [
+      1121,
+      418,
+      1243,
+      721
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 3,
+    "start_frame": 262,
+    "start_sec": 13.15,
+    "stop_frame": 350,
+    "stop_sec": 17.57,
+    "start_box": [
+      676,
+      669,
+      805,
+      949
+    ],
+    "stop_box": [
+      723,
+      650,
+      899,
+      921
+    ]
+  },
+  {
+    "event": "PPE_VIOLATION",
+    "track_id": 3,
+    "label": "no helmet",
+    "start_frame": 322,
+    "start_sec": 16.16,
+    "stop_frame": 350,
+    "stop_sec": 17.57,
+    "start_box": [
+      698,
+      644,
+      824,
+      930
+    ],
+    "stop_box": [
+      723,
+      650,
+      899,
+      921
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 390,
+    "start_sec": 19.57,
+    "stop_frame": 396,
+    "stop_sec": 19.87,
+    "start_box": [
+      1146,
+      416,
+      1279,
+      729
+    ],
+    "stop_box": [
+      1149,
+      419,
+      1278,
+      729
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 408,
+    "start_sec": 20.48,
+    "stop_frame": 493,
+    "stop_sec": 24.74,
+    "start_box": [
+      1167,
+      420,
+      1277,
+      727
+    ],
+    "stop_box": [
+      1185,
+      419,
+      1275,
+      724
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 4,
+    "start_frame": 408,
+    "start_sec": 20.48,
+    "stop_frame": 410,
+    "stop_sec": 20.58,
+    "start_box": [
+      775,
+      613,
+      892,
+      855
+    ],
+    "stop_box": [
+      778,
+      599,
+      901,
+      855
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 425,
+    "start_sec": 21.33,
+    "stop_frame": 426,
+    "stop_sec": 21.38,
+    "start_box": [
+      903,
+      522,
+      1078,
+      842
+    ],
+    "stop_box": [
+      919,
+      518,
+      1079,
+      845
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 495,
+    "start_sec": 24.84,
+    "stop_frame": 1391,
+    "stop_sec": 69.81,
+    "start_box": [
+      1185,
+      419,
+      1275,
+      724
+    ],
+    "stop_box": [
+      1123,
+      423,
+      1263,
+      726
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 540,
+    "start_sec": 27.1,
+    "stop_frame": 549,
+    "stop_sec": 27.55,
+    "start_box": [
+      1043,
+      529,
+      1165,
+      895
+    ],
+    "stop_box": [
+      1015,
+      521,
+      1135,
+      885
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 622,
+    "start_sec": 31.22,
+    "stop_frame": 644,
+    "stop_sec": 32.32,
+    "start_box": [
+      903,
+      509,
+      1078,
+      848
+    ],
+    "stop_box": [
+      922,
+      491,
+      1069,
+      836
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 658,
+    "start_sec": 33.02,
+    "stop_frame": 662,
+    "stop_sec": 33.22,
+    "start_box": [
+      981,
+      491,
+      1139,
+      844
+    ],
+    "stop_box": [
+      997,
+      489,
+      1197,
+      852
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 746,
+    "start_sec": 37.44,
+    "stop_frame": 748,
+    "stop_sec": 37.54,
+    "start_box": [
+      910,
+      527,
+      1070,
+      909
+    ],
+    "stop_box": [
+      912,
+      527,
+      1072,
+      909
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 784,
+    "start_sec": 39.35,
+    "stop_frame": 806,
+    "stop_sec": 40.45,
+    "start_box": [
+      866,
+      538,
+      1110,
+      915
+    ],
+    "stop_box": [
+      898,
+      537,
+      1086,
+      923
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 810,
+    "start_sec": 40.65,
+    "stop_frame": 813,
+    "stop_sec": 40.8,
+    "start_box": [
+      896,
+      538,
+      1086,
+      923
+    ],
+    "stop_box": [
+      909,
+      537,
+      1086,
+      923
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 822,
+    "start_sec": 41.25,
+    "stop_frame": 825,
+    "stop_sec": 41.41,
+    "start_box": [
+      888,
+      537,
+      1086,
+      924
+    ],
+    "stop_box": [
+      903,
+      538,
+      1086,
+      924
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 823,
+    "start_sec": 41.3,
+    "stop_frame": 851,
+    "stop_sec": 42.71,
+    "start_box": [
+      886,
+      538,
+      1086,
+      924
+    ],
+    "stop_box": [
+      847,
+      541,
+      1083,
+      922
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 826,
+    "start_sec": 41.46,
+    "stop_frame": 863,
+    "stop_sec": 43.31,
+    "start_box": [
+      896,
+      536,
+      1086,
+      924
+    ],
+    "stop_box": [
+      914,
+      540,
+      1084,
+      923
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 852,
+    "start_sec": 42.76,
+    "stop_frame": 969,
+    "stop_sec": 48.63,
+    "start_box": [
+      847,
+      541,
+      1083,
+      922
+    ],
+    "stop_box": [
+      969,
+      526,
+      1094,
+      901
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 889,
+    "start_sec": 44.62,
+    "stop_frame": 955,
+    "stop_sec": 47.93,
+    "start_box": [
+      889,
+      537,
+      1083,
+      925
+    ],
+    "stop_box": [
+      902,
+      536,
+      1084,
+      922
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 979,
+    "start_sec": 49.13,
+    "stop_frame": 984,
+    "stop_sec": 49.39,
+    "start_box": [
+      946,
+      523,
+      1095,
+      896
+    ],
+    "stop_box": [
+      942,
+      521,
+      1098,
+      894
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 985,
+    "start_sec": 49.44,
+    "stop_frame": 987,
+    "stop_sec": 49.54,
+    "start_box": [
+      938,
+      520,
+      1098,
+      893
+    ],
+    "stop_box": [
+      936,
+      517,
+      1100,
+      890
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 1131,
+    "start_sec": 56.76,
+    "stop_frame": 1139,
+    "stop_sec": 57.16,
+    "start_box": [
+      983,
+      450,
+      1182,
+      764
+    ],
+    "stop_box": [
+      1026,
+      445,
+      1165,
+      757
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 1243,
+    "start_sec": 62.38,
+    "stop_frame": 1248,
+    "stop_sec": 62.63,
+    "start_box": [
+      980,
+      447,
+      1115,
+      763
+    ],
+    "stop_box": [
+      1002,
+      456,
+      1109,
+      780
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 1259,
+    "start_sec": 63.19,
+    "stop_frame": 1261,
+    "stop_sec": 63.29,
+    "start_box": [
+      962,
+      463,
+      1148,
+      790
+    ],
+    "stop_box": [
+      956,
+      465,
+      1169,
+      807
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 5,
+    "start_frame": 1327,
+    "start_sec": 66.6,
+    "stop_frame": 1331,
+    "stop_sec": 66.8,
+    "start_box": [
+      986,
+      446,
+      1108,
+      736
+    ],
+    "stop_box": [
+      953,
+      446,
+      1095,
+      700
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 5,
+    "start_frame": 1335,
+    "start_sec": 67.0,
+    "stop_frame": 1350,
+    "stop_sec": 67.75,
+    "start_box": [
+      927,
+      433,
+      1049,
+      698
+    ],
+    "stop_box": [
+      853,
+      457,
+      961,
+      690
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 1407,
+    "start_sec": 70.61,
+    "stop_frame": 1493,
+    "stop_sec": 74.93,
+    "start_box": [
+      1138,
+      431,
+      1261,
+      726
+    ],
+    "stop_box": [
+      1160,
+      426,
+      1266,
+      724
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 1506,
+    "start_sec": 75.58,
+    "stop_frame": 2198,
+    "stop_sec": 110.31,
+    "start_box": [
+      1161,
+      426,
+      1266,
+      725
+    ],
+    "stop_box": [
+      1198,
+      422,
+      1284,
+      734
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 6,
+    "start_frame": 1974,
+    "start_sec": 99.07,
+    "stop_frame": 1996,
+    "stop_sec": 100.18,
+    "start_box": [
+      790,
+      535,
+      934,
+      769
+    ],
+    "stop_box": [
+      921,
+      593,
+      1065,
+      800
+    ]
+  },
+  {
+    "event": "ZONE_ENTRY",
+    "track_id": 6,
+    "start_frame": 2020,
+    "start_sec": 101.38,
+    "stop_frame": 2063,
+    "stop_sec": 103.54,
+    "start_box": [
+      922,
+      513,
+      1060,
+      780
+    ],
+    "stop_box": [
+      923,
+      503,
+      1068,
+      778
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 1,
+    "start_frame": 2206,
+    "start_sec": 110.72,
+    "stop_frame": 2210,
+    "stop_sec": 110.92,
+    "start_box": [
+      1200,
+      411,
+      1288,
+      729
+    ],
+    "stop_box": [
+      1198,
+      408,
+      1296,
+      717
+    ]
+  },
+  {
+    "event": "IDLE_ALERT",
+    "track_id": 6,
+    "start_frame": 2279,
+    "start_sec": 114.38,
+    "stop_frame": 2295,
+    "stop_sec": 115.18,
+    "start_box": [
+      1006,
+      373,
+      1093,
+      634
+    ],
+    "stop_box": [
+      992,
+      366,
+      1075,
+      620
+    ]
+  }
+]
